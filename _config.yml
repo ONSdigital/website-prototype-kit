@@ -16,7 +16,7 @@
 title: Digital Publishing Prototype Kit
 email: benjamin.stanton@ons.gov.uk
 description: Use this to make ONS website prototypes.
-baseurl: "/website-prototype-kit/v1" # the subpath of your site, e.g. /blog
+baseurl: "/website-prototype-kit" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
