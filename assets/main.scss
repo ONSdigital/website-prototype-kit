@@ -1,0 +1,33 @@
+---
+# Only this main Sass file needs front matter (these dashes are enough)
+---
+
+.prototype {
+// Elements
+@import "breakpoints";
+@import "colours";
+@import "typography";
+@import "tables";
+@import "links";
+@import "visually-hidden";
+@import "borders";
+@import "forms";
+@import "flex-grid";
+@import "florence";
+@import "utilities";
+
+// Patterns
+@import "banners";
+@import "breadcrumbs";
+@import "meta";
+@import "pullout-box";
+@import "show-hide";
+@import "details";
+@import "footnotes";
+@import "pattern-library";
+@import "content-box";
+@import "release-data";
+@import "info-alert";
+@import "warning-text";
+@import "inset-text";
+}

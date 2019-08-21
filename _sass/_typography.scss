@@ -1,0 +1,236 @@
+// New typography styles for the bulletin
+// See underneath for the old style
+
+// Reset
+
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+// Variables
+
+$spacing-unit: 8px;
+
+// Vertical rhythm
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, svg, %vertical-rhythm {
+  margin-bottom: $spacing-unit*2;
+  line-height: 1.5;
+}
+
+// Headings
+
+.heading-xlarge,
+.heading-large,
+.heading-medium,
+.heading-normal,
+.heading-small,
+.heading-xsmall,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-top: $spacing-unit*2;
+  font-weight: bold;
+}
+
+// Base font size
+
+address,li,p,dl,.btn, summary {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: $spacing-unit*2;
+  @media (min-width: 768px) {
+    margin-bottom: $spacing-unit*3;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+// Lists
+ul,ol {
+  margin-bottom: $spacing-unit*4;
+  padding-left: $spacing-unit*4;
+}
+li {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+// Definition list
+
+ dt {
+   float: left;
+   clear: left;
+ }
+
+ .definition-list__description--inline {
+  display: inline;
+}
+
+.definition-list__description--inline::after {
+    content: " |";
+    color: $iron;
+}
+
+.definition-list__description--inline:last-child::after {
+    content: "";
+}
+
+// Font weights
+
+.font-weight--bold {
+  font-weight: bold;
+}
+
+.font-weight--normal {
+  font-weight: normal;
+}
+
+// Links
+
+a {
+  text-decoration: underline;
+}
+
+// Headings
+
+.font-xlarge,
+.heading-xlarge,
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 16px 0 24px 0;
+  @media (min-width: 768px) {
+    font-size: 38px;
+    line-height: 48px;
+    margin: 32px 0 32px 0;
+  }
+}
+
+.font-large,
+.heading-large,
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 24px 0 16px 0;
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: $spacing-unit*3;
+    margin: 32px 0 32px 0;
+  }
+}
+
+.font-medium,
+.heading-medium,
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 24px 0 16px 0;
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 32px 0 16px 0;
+  }
+}
+
+.font-normal,
+.heading-normal,
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 16px 0 16px 0;
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 24px 0 16px 0;
+  }
+}
+
+.font-small,
+.heading-small,
+small,
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: $spacing-unit;
+  @media (min-width: 768px) {
+    margin-bottom: $spacing-unit*3;
+  }
+}
+
+h5.chart-subtitle {
+  font-weight: normal;
+  padding: 0;
+}
+
+.font-xsmall,
+.heading-xsmall,
+h6 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+// hr
+
+hr {
+  border: 0;
+  border-bottom: 1px solid $iron;
+}
+
+// panel
+
+summary {
+  margin-bottom:0;
+}
+
+.panel {
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+}
+
+// Section contents for the bulletin design sprint
+ul.section-contents {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-contents li {
+  margin: 0;
+  padding-right: $spacing-unit*2;
+  margin-left: $spacing-unit*2;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+
+blockquote {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  text-align: justify;
+  padding-left: $spacing-unit*4;
+  padding-right: $spacing-unit*4;
+  margin-bottom: $spacing-unit*4;
+  @media (min-width: 768px) {
+    padding-left: $spacing-unit*8;
+    padding-right: $spacing-unit*8;
+  }
+}
+
+.header-quote {
+  img {
+    width: 52px;
+    height: 34px;
+  }
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: $spacing-unit*4;
+}

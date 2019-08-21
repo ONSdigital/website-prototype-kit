@@ -1,0 +1,87 @@
+.release-data {
+
+  p {
+    margin-bottom: $spacing-unit*2;
+  }
+
+  display: inline-block;
+
+  .panel {
+      background:rgba(255,255,255, 0.1);
+      border-left: 5px solid $haze;
+      padding-left: $spacing-unit*2;
+      padding-right: $spacing-unit*2;
+  }
+  @media (min-width: 768px){
+    p {
+      margin-bottom: $spacing-unit*4;
+    }
+  }
+}
+
+.panel-small {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.background--0 {
+  background: none !important;
+}
+
+.latest-release {
+  display: inline-block;
+  margin-bottom: $spacing-unit*0;
+}
+
+.inset-text-19 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 19px;
+}
+
+.inset-text-16 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.header-meta {
+  padding-top: 0;
+  p {
+    margin-bottom: $spacing-unit;
+  }
+
+  @media (min-width: 768px){
+    padding-top: $spacing-unit*2;
+    p {
+      border-right: 1px solid rgba(0, 0, 0, .3);
+      margin-bottom: $spacing-unit*2;
+    }
+  }
+}
+
+.header-meta-wrap {
+  padding-top: 8px;
+  @media (min-width: 768px){
+    padding-top: 0;
+  }
+}
+
+.clear-border {
+  border-right: 0;
+}
+
+.background--haze-transparent {
+  background:rgba(255,255,255, 0.075);
+}
+
+.background--astraldark-transparent {
+  background:rgba(0,0,0, 0.03);
+}
+// .background--haze-transparent {
+//   background-color:$nevada;
+// }

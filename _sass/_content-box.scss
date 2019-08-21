@@ -1,0 +1,82 @@
+.content-box {
+  background-color: $gallery;
+  overflow: auto;
+  padding-right: $spacing-unit*3;
+  padding-left: $spacing-unit*3;
+  margin-bottom: $spacing-unit*2;
+
+  p {
+    margin-top: $spacing-unit*3;
+    margin-bottom: $spacing-unit*3;
+  }
+  ul {
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: $spacing-unit*4;
+    p {
+      margin-top: $spacing-unit;
+      margin-bottom: $spacing-unit;
+    }
+  }
+
+  @media (min-width: 768px){
+    padding-right: $spacing-unit*4;
+    padding-left: $spacing-unit*4;
+    margin-bottom: $spacing-unit*4;
+    p {
+      margin-top: $spacing-unit*3;
+      margin-bottom: $spacing-unit*3;
+    }
+  }
+}
+
+.js-show-hide__content {
+  .highlight {
+    background-color: $white;
+  }
+}
+
+.highlight {
+  background-color: $gallery;
+  // background-color: rgba(255, 204, 0, .2);
+  p {
+    font-size: 16px;
+  }
+}
+
+.icon-box {
+  position: relative;
+
+  p {
+    display: block;
+    padding-left: 50px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+  }
+}
+
+.icon-box-small {
+  position: relative;
+
+  p {
+    display: block;
+    padding-left: 30px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+  }
+}
+
+
+.icon-pdf--dark {
+  background-position: -16px -436px;
+
+}

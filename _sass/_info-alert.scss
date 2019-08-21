@@ -1,0 +1,16 @@
+.info-alert {
+  position: relative;
+
+  p {
+    display: block;
+    padding-left: 50px;
+    font-weight: bold;
+  }
+
+  .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -17px;
+  }
+}
