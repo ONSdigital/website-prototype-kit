@@ -10,8 +10,6 @@
 - Run Jekyll
 - Open this repo in a [code editor](https://atom.io/)
 
-Stuck? Ask Benjy for help.
-
 ## License
 
 Copyright ©‎ 2018, Office for National Statistics (https://www.ons.gov.uk)
