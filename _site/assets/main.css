@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body {
+  background: #f39; }
+
 .prototype .font-color--astral {
   color: #3B7A9E; }
 .prototype .font-color--abbey {

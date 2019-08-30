@@ -2,6 +2,10 @@
 # Only this main Sass file needs front matter (these dashes are enough)
 ---
 
+body {
+  background: #f39;
+}
+
 .prototype {
 // Elements
 @import "breakpoints";
