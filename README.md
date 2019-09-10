@@ -15,3 +15,5 @@
 Copyright ©‎ 2018, Office for National Statistics (https://www.ons.gov.uk)
 
 Released under MIT license, see [LICENSE](LICENSE.md) for details.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a5aa4aa-94d5-4db7-b549-e29964a08d24/deploy-status)](https://app.netlify.com/sites/ons-prototypes/deploys)
