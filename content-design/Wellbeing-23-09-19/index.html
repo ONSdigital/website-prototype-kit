@@ -14,6 +14,11 @@ summary: "TBD"
 <head>
 
   <style>
+
+    html {
+	     scroll-behavior: smooth;
+    }
+
     /* Styling for the header */
     .summary {
       max-width: 38em;
@@ -28,6 +33,14 @@ summary: "TBD"
     article img {
       width:100%;
       height:auto;
+    }
+
+    .table-of-contents__list li {
+      margin: 0 0 0 32px; font-size: 14px; line-height: 24px;
+    }
+
+    .table-of-contents__list li a {
+      text-decoration: none; font-size: 14px; line-height: 24px
     }
 
     @media only screen and (min-width: 768px) {
@@ -143,27 +156,19 @@ summary: "TBD"
           <div class="table-of-contents js-sticky-toc print--avoid-break">
             <h2 style="font-size: 24px; font-weight: 400; line-height: 24px;">Table of contents</h2>
             <ol id="toc" class="table-of-contents__list">
-              <li style="margin: 0 0 0 32px; font-size: 14px; line-height: 24px">
-                <a style="text-decoration: none; font-size: 14px; line-height: 24px" href="#main-points">Main points</a>
-              </li>
-              <li style="margin: 0 0 0 32px; font-size: 14px; line-height: 24px">
-                <a style="text-decoration: none; font-size: 14px; line-height: 24px" href="#analysis">Analysis</a>
-              </li>
-              <li style="margin: 0 0 0 32px; font-size: 14px; line-height: 24px">
-                <a style="text-decoration: none; font-size: 14px; line-height: 24px" href="#data">Well-being data</a>
-              </li>
-              <li style="margin: 0 0 0 32px; font-size: 14px; line-height: 24px">
-                <a style="text-decoration: none; font-size: 14px; line-height: 24px" href="#glossary">Glossary</a>
-              </li>
-              <li style="margin: 0 0 0 32px; font-size: 14px; line-height: 24px">
-                <a style="text-decoration: none; font-size: 14px; line-height: 24px" href="#measuring-this-data">Measuring this data</a>
-              </li>
-              <li style="margin: 0 0 0 32px; font-size: 14px; line-height: 24px">
-                <a style="text-decoration: none; font-size: 14px; line-height: 24px" href="#strengths-and-limitations">Strengths and limitations</a>
-              </li>
-              <li style="margin: 0 0 0 32px; font-size: 14px; line-height: 24px">
-                <a style="text-decoration: none; font-size: 14px; line-height: 24px" href="#related-links">Related links</a>
-              </li>
+              <li><a href="#section-1">Main points</a></li>
+              <li><a href="#section-2">Well-being disparities</a></li>
+              <li><a href="#section-3">Loneliness disparities</a></li>
+              <li><a href="#section-4">Impairment type breakdowns</a></li>
+              <li><a href="#section-5">Impairment severity breakdowns</a></li>
+              <li><a href="#section-6">Breakdowns by impairment type and severity</a></li>
+              <li><a href="#section-7">Age breakdowns</a></li>
+              <li><a href="#section-8">Gender breakdowns</a></li>
+              <li><a href="#section-9">Breakdowns by country</a></li>
+              <li><a href="#section-10">Glossary</a></li>
+              <li><a href="#section-11">Measuring this data</a></li>
+              <li><a href="#section-12">Strengths and limitations</a></li>
+              <li><a href="#section-13">Related links</a></li>
             </ol>
           </div>
         </div>
@@ -190,7 +195,7 @@ summary: "TBD"
           <!-- Section 2 - main points-->
           <div id="main-points" class="content-margin">
 
-            <h2>1. Main points</h2>
+            <h2 id="section-1">1. Main points</h2>
             <ul>
                <li>Average life satisfaction, worthwhile, and happiness ratings are lower for disabled people than non-disabled people.</li>
                <li>Average anxiety ratings are higher for disabled people, indicating that they also feel more anxious than those without a disability.</li>
@@ -206,9 +211,8 @@ summary: "TBD"
 
           <div id="analysis" class="content-margin">
 
-            <h2>2. Analysis</h2>
-            <h3>Well-being disparities</h3>
-            <h4>Disabled people report lower well-being levels than non-disabled people</h4>
+            <h2 id="section-2">2. Well-being disparities</h2>
+            <h3>Disabled people report lower well-being levels than non-disabled people</h3>
             <p>The average (mean) ratings across the four measures of personal well-being in the year 2018 were:</p>
             <ul>
               <li>6.5 out of 10 for disabled people, compared to 7.4 for non-disabled people, for happiness yesterday</li>
@@ -217,9 +221,11 @@ summary: "TBD"
               <li>3.6 out of 10 for disabled people, compared to 2.4 for non-disabled people, for anxiety yesterday (higher numbers equate to poorer well-being in this measure)</li>
             </ul>
             <p>Between the years 2014 and 2018, all four well-being measures remained stable for both disabled and non-disabled people.</p>
+            <p><a class href="#toc">Back to table of contents</a></p>
 
-            <h3>Loneliness disparities</h3>
-            <p><strong>A higher percentage of disabled people feel lonely compared to non-disabled people</strong></p>
+
+            <h2 id="section-3">3. Loneliness disparities</h2>
+            <h3>A higher percentage of disabled people feel lonely compared to non-disabled people</h3>
             <p>The proportion of disabled people who feel lonely regularly is more than two times that of non-disabled people. In the year ending March 2018, 34.6% of disabled people reported that they felt lonely regularly, this compares to only 16.0% for non-disabled people.&nbsp;</p>
             <p>Between the years 2013 to 2014 and 2017 to 2018, the proportion of disabled people who reported feeling lonely regularly increased by 3.0 percentage points, despite the figure for non-disabled people falling by 0.5 percentage points.&nbsp;</p>
 
@@ -230,42 +236,53 @@ summary: "TBD"
 
           <!-- Section 4 -  data -->
           <div id="data" class="content-margin">
-            <h2>3. Well-being data</h2>
 
-            <h3>Impairment type breakdowns</h3>
-            <p><strong>Well-being levels are lowest in disabled people whose main health problem is a mental condition</strong></p>
+            <h2 id="section-4">4. Impairment type breakdowns</h2>
+            <h3>Well-being levels are lowest in disabled people whose main health problem is a mental condition</h3>
             <img src="charts/1a.png">
             <img src="charts/1b.png">
             <p>The average well-being levels of disabled people varies with impairment type. Whilst the average rating for each well-being measure was poorer for disabled people in all impairment types (physical, mental or “other”), well-being measures were notably poor for those with a mental condition as their main health problem.</p>
+            <p><a class href="#toc">Back to table of contents</a></p>
 
-            <h3>Impairment severity breakdowns</h3>
-            <p><strong>Lower well-being levels are seen in disabled people with more severe impairments</strong></p>
+
+            <h2 id="section-5">5. Impairment severity breakdowns</h2>
+            <h3>Lower well-being levels are seen in disabled people with more severe impairments</h3>
             <img src="charts/fig2.png">
             <p>Disabled people with a condition that impairs their ability to complete daily activities “a lot” have poorer well-being ratings in all four measures, than those whose condition impairs this ability “a little”.&nbsp;</p>
             <p>This effect is also seen in loneliness, where a much higher proportion of people with severe impairments feel lonely regularly, compared to those with less severe impairments. 44.4% of those who are impaired “a lot” feel lonely regularly, compared to 30.2% of those impaired “a little” and 16.0% of those without a disability.&nbsp;</p>
+            <p><a class href="#toc">Back to table of contents</a></p>
 
-            <h3>Breakdowns by impairment type and severity</h3>
-            <p><strong>The lowest well-being levels are seen in disabled people with a severe impairment and a mental condition as a main health problem</strong></p>
+
+            <h2 id="section-6">6. Breakdowns by impairment type and severity</h2>
+            <h3>The lowest well-being levels are seen in disabled people with a severe impairment and a mental condition as a main health problem</h3>
             <img src="charts/fig3.png">
             <p>Those with all impairment types (physical, mental or other) have poorer well-being ratings when their impairment is more severe.&nbsp;</p>
             <p>Disabled people whose primary health problem is a mental condition and whose ability to carry out day-to-day activities is impaired “a lot” by their condition, have the lowest well-being scores on all measures. The greatest disparity is seen in anxiety ratings, where those who are severely impaired and whose main health problem is a mental condition have an average rating of 5.7, compared to 2.4 for non-disabled people.</p>
+            <p><a class href="#toc">Back to table of contents</a></p>
 
-            <h3>Age breakdowns</h3>
-            <p><strong>The largest disparity in the proportion of people who feel lonely regularly, between disabled and non-disabled people, is seen in those aged 16-24</strong></p>
+
+            <h2 id="section-7">7. Age breakdowns</h2>
+            <h3>The largest disparity in the proportion of people who feel lonely regularly, between disabled and non-disabled people, is seen in those aged 16-24</h3>
             <img src="charts/fig4.png">
             <p>Loneliness is highest in the younger age groups (as previous research has shown) for both disabled and non-disabled people; 61.4% of disabled 16-24 year olds feel lonely regularly, compared to 24.8% of non-disabled people in the same age group.&nbsp;</p>
             <p>The percentage of people who feel lonely regularly then decreases with age for both disabled and non-disabled people, with the lowest proportion of people who feel lonely in the 65+ age groups. The disparity between disabled and non-disabled people in the proportion of people who feel lonely regularly also decreases with age, from 36.6 percentage points in the 16-24 age group to 12.7 percentage points in the 65+ age group.</p>
             <p>Disparities in the average ratings on the four well-being measures, between disabled and non-disabled people, are relatively consistent across all age groups.&nbsp;</p>
+            <p><a class href="#toc">Back to table of contents</a></p>
 
-            <h3>Gender breakdowns</h3>
-            <p><strong>There are no major differences between men and women in the disparities for well-being ratings of disabled and non-disabled people</strong></p>
+
+            <h2 id="section-8">8. Gender breakdowns</h2>
+            <h3>There are no major differences between men and women in the disparities for well-being ratings of disabled and non-disabled people</h3>
             <p>Despite a general trend of higher happiness, worthwhile and life satisfaction ratings in women for both disabled and non-disabled people, the disparities between disabled and non-disabled people are consistent for men and women in these measures.</p>
             <p>The trend is reversed when looking at anxiety and loneliness, with higher anxiety ratings and proportions of people who feel lonely regularly seen in both disabled and non-disabled women in comparison to male counterparts. However, the disparities between disabled and non-disabled people are also consistent for men and women in these areas.</p>
+            <p><a class href="#toc">Back to table of contents</a></p>
 
-            <h3>Breakdowns by country</h3>
-            <p><strong>There is a bigger disparity in the average anxiety ratings for disabled and non-disabled people in Scotland than that in England</strong></p>
+
+            <h2 id="section-9">9. Breakdowns by country</h2>
+            <h3>There is a bigger disparity in the average anxiety ratings for disabled and non-disabled people in Scotland than that in England</h3>
             <p>Disparities in the average happiness, worthwhile and life satisfaction ratings for disabled and non-disabled people are relatively consistent across the four UK countries.&nbsp;</p>
             <p>However, there appears to be differences between the four countries in the disparities for the average anxiety ratings of disabled and non-disabled people. Disabled people in Scotland average 1.6 less on anxiety ratings than non-disabled people, this compares to a disparity of 1.1 in England. The disparity in average anxiety ratings are 1.3 in Wales and 1.4 in Northern Ireland.&nbsp;</p>
+            <p><a class href="#toc">Back to table of contents</a></p>
+
 
             <h3>Disability and well-being data&nbsp;</h3>
             <p><strong>Well-being data</strong></p>
@@ -280,7 +297,7 @@ summary: "TBD"
 
           <!-- Section 4 - glossary -->
           <div id="glossary" class="content-margin">
-            <h2>4. Glossary</h2>
+            <h2 id="section-10">10. Glossary</h2>
             <h3>The Equality Act (2010)</h3>
             <p>In this bulletin, disability is defined by The Equality Act (2010). This states a person has a&nbsp;physical or mental health condition or illness that has lasted or is expected to last 12 months or more that reduces their ability to carry-out day-to-day activities.</p>
             <h3>Loneliness</h3>
@@ -298,7 +315,7 @@ summary: "TBD"
 
           <!-- Section 5 - measuring -->
           <div id="measuring-this-data" class="content-margin">
-            <h2>5. Measuring the data</h2>
+            <h2 id="section-11">11. Measuring the data</h2>
             <p>The Annual Population Survey is a household survey of approximately 250,000 individuals, covering UK. The survey does not cover student accommodation. Analysis using the APS in this bulletin looks at the working age population only (16-64 year olds). Data is collected between January and December of each year.</p>
             <p>The Community Life Survey is a household self-completion survey of approximately 10,000 adults aged 16+ in England. The survey can be completed either in a paper or online format; the question regarding disability status is asked online only. Data for the 2017 to 2018 year was collected between August 2017 and March 2018.</p>
             <p><a class href="#toc">Back to table of contents</a></p>
@@ -306,7 +323,7 @@ summary: "TBD"
 
           <!-- Section 6 - strengths -->
           <div id="strengths-and-limitations" class="content-margin">
-            <h2>6. Strengths and limitations</h2>
+            <h2 id="section-12">12. Strengths and limitations</h2>
             <h3>Well-being</h3>
             <p>The&nbsp;
               <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/methodologies/personalwellbeingintheukqmi">Personal well-being in the UK Quality and Methodology Information</a> report contains important information on the strengths and limitations and uses of the data as well as how outputs are created and the quality and accuracy of those outputs. For more information on personal well-being, please see the&nbsp;
@@ -322,8 +339,8 @@ summary: "TBD"
 
           <!-- Section 7 - related links-->
           <div id="related-links" class="content-margin">
-            <h2>7. Related links</h2>
-            <div class="content-box">
+            <h2 id="section-13">13. Related links</h2>
+            <div class="content-box" style="word-break: break-word">
 
             <p>https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/disability/social/disabilityandsocialparticipation</p>
             <p><u>Disability and social participation</u></p>
