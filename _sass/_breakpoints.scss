@@ -1,9 +1,0 @@
-// Width of the content area
-$md: 768px;
-$lg: 992px;
-
-@mixin media-query($device) {
-    @media screen and (min-width: $device) {
-        @content;
-    }
-}
