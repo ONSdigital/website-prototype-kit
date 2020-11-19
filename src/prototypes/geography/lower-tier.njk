@@ -1,0 +1,41 @@
+---js
+{
+  layout: 'prototype',
+  warning: true,
+  permalink: 'prototypes/geography/{{ lowerTier.slug }}/',
+  pagination: {
+    data: 'all',
+    size: 1,
+    alias: 'lowerTier',
+    before: (data) => data.flatMap(({ children }) => children).flatMap(({ children }) => children).filter((children) => !!children)
+  },
+}
+---
+{% set breadcrumbs = [
+    {
+        href: "/",
+        title: "Home"
+    }, {
+        href: "/prototypes/geography/",
+        title: "Regions"
+    }, {
+        href: "/prototypes/geography/",
+        title: lowerTier.parent.name
+    }, {
+        href: "/prototypes/geography/",
+        title: lowerTier.parent.parent.name
+    }, {
+        title: lowerTier.name
+    }
+] %}
+
+<div class="wrapper prototype">
+    <div class="col-wrap">
+        <div class="col col--md-one col--lg-one margin-bottom--8">
+            {% include "breadcrumbs.html" %}
+            <h1 class="margin-top--2 margin-bottom--0">{{ lowerTier.name }}</h1>
+            <h5 class="margin-top--0 margin-bottom--4">Lower tier local authority</h5>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+        </div>
+    </div>
+</div>

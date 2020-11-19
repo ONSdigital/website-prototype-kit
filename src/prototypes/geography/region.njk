@@ -1,0 +1,40 @@
+---
+layout: prototype
+warning: true
+permalink: "prototypes/geography/{{ region.slug }}/"
+pagination:
+    data: all
+    size: 1
+    alias: region
+---
+
+{% set breadcrumbs = [
+    {
+        href: "/prototypes/",
+        title: "Home"
+    }, {
+        href: "/prototypes/geography/",
+        title: "Regions"
+    }, {
+        title: region.name
+    }
+] %}
+
+<div class="wrapper prototype">
+    <div class="col-wrap">
+        <div class="col col--md-one col--lg-one margin-bottom--8">
+
+            {% include "breadcrumbs.html" %}
+
+            <h1 class="margin-top--2 margin-bottom--0">{{ region.name }}</h1>
+            <h5 class="margin-top--0 margin-bottom--4">Region</h5>
+            <ul>
+                {% for child in region.children %}
+                    <li style="margin: 0; padding: 0">
+                        <a href="/prototypes/geography/{{ child.slug }}">{{child.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

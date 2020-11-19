@@ -1,0 +1,32 @@
+---
+layout: prototype
+warning: true
+---
+
+{% set breadcrumbs = [
+    {
+        href: "/prototypes/",
+        title: "Home"
+    }, {
+        href: "/prototypes/geography/",
+        title: "Regions"
+    }
+] %}
+
+<div class="wrapper prototype">
+    <div class="col-wrap">
+        <div class="col col--md-one col--lg-one margin-bottom--8">
+
+            {% include "breadcrumbs.html" %}
+
+            <h1 class="margin-top--2 margin-bottom--0">Regions</h1>
+            <ul>
+                {% for region in all %}
+                    <li style="margin: 0; padding: 0">
+                        <a href="/prototypes/geography/{{region.slug}}">{{region.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
