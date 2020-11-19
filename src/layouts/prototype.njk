@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include "head.njk" %}
+
+    <body>
+
+        {% if page.warning != false %}
+            {% include "banners/warning.njk" %}
+        {% endif %}
+
+        {% if page.header != false %}
+            {% include "header.njk" %}
+        {% endif %}
+
+        {{ content | safe }}
+
+        {% if page.footer != false %}
+            {% include "footer.njk" %}
+        {% endif %}
+
+    </body>
+
+    <!--[if gt IE 8]><!-->
+    <script type="text/javascript" src="https://cdn.ons.gov.uk/sixteens/{{ metadata.sixteensVersion }}/js/main.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+    <!--<![endif]-->
+
+</html>

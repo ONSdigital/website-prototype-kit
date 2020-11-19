@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
   return {
     useGitIgnore: false,
     dir: {
-      input: "./",
+      input: "./src",
       output: "dist",
       layouts: "layouts",
       includes: "includes",

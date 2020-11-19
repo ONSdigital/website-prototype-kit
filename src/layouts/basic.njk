@@ -1,0 +1,22 @@
+<!-- A basic layout with minimal header -->
+<!-- Use this template for pages about the prototypes, not the prototypes themselves -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include "head.njk" %}
+
+    <body class="prototype">
+
+        {% include "header-basic.njk" %}
+        <div class="wrapper">
+            <div class="col-wrap">
+                <div class="col col--md-two-thirds col--lg-two-thirds">
+                    {{ content | safe }}
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

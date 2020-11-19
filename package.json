@@ -7,12 +7,17 @@
     "build": "eleventy",
     "watch": "eleventy --watch",
     "dev": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "clean": "rimraf ./dist",
+    "build-geo-data": "node build.js"
   },
   "author": "Hamish Taplin",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "ramda": "^0.27.1",
+    "rimraf": "^3.0.2",
+    "slugify": "^1.4.6"
   }
 }

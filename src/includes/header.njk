@@ -1,0 +1,30 @@
+<header class="border-bottom--iron-sm border-bottom--iron-md">
+    <a class="skiplink" href="#main" tabindex="0">
+		Skip to main content
+	</a>
+
+    <div class="wrapper">
+        <div class="header col-wrap">
+
+            {% include "logo.njk" %}
+
+            {% if page.language-switch != false %}
+                {% include "language-switch.njk" %}
+            {% endif %}
+
+            {% if page.secondary-nav != false %}
+                {% include "secondary-nav.njk" %}
+            {% endif %}
+
+        </div>
+    </div>
+
+    {% if page.primary-nav != false %}
+        {% include "primary-nav.njk" %}
+    {% endif %}
+
+    {% if page.search != false %}
+        {% include "search.njk" %}
+    {% endif %}
+
+</header>
