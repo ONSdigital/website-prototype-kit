@@ -2,16 +2,23 @@
 layout: prototype
 warning: true
 ---
+<script>
+    window.__regions = {{regions|dump|safe}}
+</script>
 
 {% set breadcrumbs = [
     {
         href: "/prototypes/",
         title: "Home"
     }, {
-        href: "/prototypes/geography/",
-        title: "Regions"
+        href: "/prototypes/geography/england/",
+        title: "England"
     }
 ] %}
+
+<div style="height: 0; padding-bottom: 35%; position: relative; overflow: hidden">
+    <div id='map' style='left:0; top:0; height:100%; width:100%; position:absolute;'></div>
+</div>
 
 <div class="wrapper prototype">
     {% include "breadcrumbs.njk" %}
@@ -27,10 +34,6 @@ warning: true
                 {% endfor %}
             </ul>
         </div>
-        <div class="col col--md-two-thirds col--lg-two-thirds">
-            <div style="height: 0; padding-bottom: 75%; position: relative; overflow: hidden">
-                <div id='map' style='left:0; top:0; height:100%; width:100%; position:absolute;'></div>
-            </div>
-        </div>
+        <div class="col col--md-two-thirds col--lg-two-thirds"></div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-const geoData = require("./data/geo.json")
+const geoData = require("./data/england.json")
 const R = require("ramda")
 const fs = require("fs")
 
@@ -87,13 +87,33 @@ const mergeChildren = (parent, children) =>
     parent
   )
 
-const all = mergeChildren(regions, mergeChildren(upperTier, lowerTier))
-
-const content = JSON.stringify({ all })
-
-fs.writeFile("./prototypes/geography/data.json", content, (err) => {
-  if (err) {
-    console.error(err)
-    return
+fs.writeFile(
+  "./prototypes/geography/data/regions.json",
+  JSON.stringify(mergeChildren(regions, upperTier)),
+  (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
   }
-})
+)
+fs.writeFile(
+  "./prototypes/geography/data/upperTier.json",
+  JSON.stringify(mergeChildren(upperTier, lowerTier)),
+  (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+  }
+)
+fs.writeFile(
+  "./prototypes/geography/data/lowerTier.json",
+  JSON.stringify(lowerTier),
+  (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+  }
+)
