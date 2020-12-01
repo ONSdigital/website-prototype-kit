@@ -1,0 +1,17 @@
+---
+layout: prototype
+warning: true
+permalink: "{{country.permalink}}"
+pagination:
+    data: "countries"
+    alias: "country"
+    size: 1
+---
+
+{% set breadcrumbs = country.breadcrumbs %}
+{% set children = country.children %}
+{% set title = country.name %}
+{% set type = "country" %}
+{% set id = country.id %}
+
+{% include "./includes/area.njk" %}

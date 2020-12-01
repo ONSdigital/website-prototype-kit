@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   map.on("load", function () {
     map.addSource("regions", {
       type: "geojson",
-      data: "/assets/data/region.geojson"
+      data: "/data/england.geojson"
     })
 
     map.addLayer({

@@ -1,45 +1,17 @@
 ---
 layout: prototype
 warning: true
-permalink: "prototypes/geography/{{ upperTier.slug }}/"
+permalink: "{{upperTier.permalink}}"
 pagination:
-    data: upperTier
-    alias: upperTier
+    data: "upperTiers"
+    alias: "upperTier"
     size: 1
 ---
 
-{% set breadcrumbs = [
-    {
-        href: "/",
-        title: "Home"
-    }, {
-        href: "/prototypes/geography/england",
-        title: "England"
-    }, {
-        href: "/prototypes/geography/england",
-        title: upperTier.parent.name
-    }, {
-        title: upperTier.name
-    }
-] %}
+{% set type = "upper tier local authority" %}
+{% set breadcrumbs = upperTier.breadcrumbs %}
+{% set children = upperTier.children %}
+{% set title = upperTier.name %}
+{% set id = upperTier.id %}
 
-<div class="wrapper prototype">
-    <div class="col-wrap">
-        <div class="col col--md-one col--lg-one margin-bottom--8">
-
-            {% include "breadcrumbs.njk" %}
-
-            <h1 class="margin-top--2 margin-bottom--0">{{ upperTier.name }}</h1>
-            <h5 class="margin-top--0 margin-bottom--4">Upper tier local authority</h5>
-
-            <ul>
-                {% for child in upperTier.children %}
-                    <li style="margin: 0; padding: 0">
-                        <a href="/prototypes/geography/{{ child.slug }}">{{child.name}}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-
-        </div>
-    </div>
-</div>
+{% include "./includes/area.njk" %}

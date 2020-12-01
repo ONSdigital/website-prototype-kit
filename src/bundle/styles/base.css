@@ -1,3 +1,21 @@
-html {
-  font-size: 18px;
+a {
+  @apply underline;
+  @apply text-blumine;
+}
+
+li {
+  @apply text-base;
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply m-0 p-0;
+}
+
+p {
+  @apply m-0 p-0 mb-2 text-base;
 }

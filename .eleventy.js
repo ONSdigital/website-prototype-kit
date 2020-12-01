@@ -1,15 +1,20 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("assets")
+module.exports = (config) => {
+  config.addPassthroughCopy({ public: "./" })
+
+  config.setBrowserSyncConfig({
+    files: ["dist/**/*"],
+    open: false
+  })
+
+  config.setDataDeepMerge(true)
 
   return {
-    useGitIgnore: false,
     dir: {
       input: "src",
       output: "dist",
       layouts: "layouts",
       includes: "includes",
       data: "data"
-    },
-    passthroughFileCopy: true
+    }
   }
 }

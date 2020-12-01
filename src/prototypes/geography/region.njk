@@ -1,40 +1,17 @@
 ---
 layout: prototype
 warning: true
-permalink: "prototypes/geography/{{ region.slug }}/"
+permalink: "{{region.permalink}}"
 pagination:
-    data: regions
+    data: "regions"
+    alias: "region"
     size: 1
-    alias: region
 ---
 
-{% set breadcrumbs = [
-    {
-        href: "/prototypes/",
-        title: "Home"
-    }, {
-        href: "/prototypes/geography/england",
-        title: "England"
-    }, {
-        title: region.name
-    }
-] %}
+{% set type = "region" %}
+{% set breadcrumbs = region.breadcrumbs %}
+{% set children = region.children %}
+{% set title = region.name %}
+{% set id = region.id %}
 
-<div class="wrapper prototype">
-    <div class="col-wrap">
-        <div class="col col--md-one col--lg-one margin-bottom--8">
-
-            {% include "breadcrumbs.njk" %}
-
-            <h1 class="margin-top--2 margin-bottom--0">{{ region.name }}</h1>
-            <h5 class="margin-top--0 margin-bottom--4">Region</h5>
-            <ul>
-                {% for child in region.children %}
-                    <li style="margin: 0; padding: 0">
-                        <a href="/prototypes/geography/{{ child.slug }}">{{child.name}}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div>
+{% include "./includes/area.njk" %}

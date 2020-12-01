@@ -1,0 +1,46 @@
+<div class="wrapper prototype mb-8">
+
+    {% if breadcrumbs %}
+        {% include "breadcrumbs.njk" %}
+    {% endif %}
+
+    <header class="mb-8">
+        <h1 class="mb-1 p-0 text-3xl font-bold">{{title}}</h1>
+        <h2 class="mt-0 text-lg">{{type | capitalize}}&nbsp;{{id}}</h2>
+    </header>
+
+    <div class="md:grid grid-cols-3 mb-4">
+        <div class="col-span-1 mb-6">
+            <h2 class="text-base font-bold mb-2">Contents</h2>
+            <ul class="m-0 mb-4 p-0">
+                <li class="m-0 p-0">
+                  — <a href="#summary">Summary</a>
+                </li>
+                {% if children.length %}
+                    <li class="m-0 p-0">
+                   — <a href="#areas">Areas within {{title}}</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-span-2 mb-6" id="summary">
+            <h2 class="text-md font-bold mb-2">Summary</h2>
+            <p>This area profile covers the {{type}} of {{title}} and is compiled of data from the 2021 Census.</p>
+            <p>The area profile covers areas within London and topics such as the population, households, housing, economy, education and health. </p>
+            <p>The profile also contains all area related datasets.</p>
+        </div>
+    </div>
+
+    {% if children.length %}
+        <div class="mb-16" id="areas">
+            <h2 class="text-md font-bold mb-2">Areas within {{title}}</h2>
+            <ul class="list-none text-base leading-relaxed m-0 p-0 text-cols-2 md:text-cols-3">
+                {% for child in children %}
+                    <li class="m-0 p-0">
+                        <a href="{{child.permalink}}" class="text-base">{{child.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</div>

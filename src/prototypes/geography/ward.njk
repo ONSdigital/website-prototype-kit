@@ -1,0 +1,17 @@
+---
+layout: prototype
+warning: true
+permalink: "{{ward.permalink}}"
+pagination:
+    data: "wards"
+    alias: "ward"
+    size: 1
+---
+
+{% set type = "ward" %}
+{% set breadcrumbs = ward.breadcrumbs %}
+{% set children = ward.children %}
+{% set title = ward.name %}
+{% set id = ward.id %}
+
+{% include "./includes/area.njk" %}
