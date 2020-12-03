@@ -1,15 +1,40 @@
 ---
-layout: prototype
+layout: basic
 page:
     warning: true
     footer: true
 ---
+{% set breadcrumbs = [{
+    title: "Home",
+    href: "../"
+    },
+    {
+    title: "Prototypes"
+    }]%}
 
 <div class="wrapper">
     <div class="col-wrap">
         <div class="col col--md-one col--lg-one">
-            <h1>Example Prototype</h1>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        {% include "breadcrumbs.njk" %}
+            <h1>Prototypes</h1>
+            <p>Each prototype should exist as a folder within <code>/prototypes</code></p>
+            <p>The root file of each prototype should include the following frontmatter:</p>
+            <code><pre class="padding-left--1">---
+title: "The prototype name"
+tags: ["proto", "index"]
+description: "The prototype description goes here"
+---</pre></code>
+            <p>The <code>"index"</code> tag is used to denote the root file of a prototype which will be listed with all other prototypes. Multiple prototype index files may exist in a folder and each will hold a description.</p>
+            <hr />
+            <ul class="padding-left--0">
+              {%- for proto in collections.index -%}
+              <li class="margin--0 padding-left--0">
+                <h3 class="margin--0 padding--0">
+                  <a href="{{ proto.url }}">{% if proto.data.title %}{{ proto.data.title }}{% else %}{{ proto.url }}{% endif %}</a></h3>{% if proto.data.description %}<p class="padding-top--0 margin-top--0 padding-bottom--0 margin-bottom--0">{{proto.data.description}}</p>{% endif %}
+                </li>
+              {%- endfor -%}
+              </ul>
         </div>
+        
     </div>
 </div>
