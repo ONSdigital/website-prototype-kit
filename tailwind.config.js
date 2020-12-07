@@ -16,6 +16,10 @@ module.exports = {
       lg: "992px",
       xl: "1440px"
     },
+    fontFamily: {
+      sans: ["Open Sans"]
+    },
+    fontSize: false,
     colors: {
       thunder: "#323132",
       shipGrey: "#414042",
