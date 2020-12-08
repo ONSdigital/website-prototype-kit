@@ -6,15 +6,11 @@
 
     {% include "head.njk" %}
 
-    <body class="prototype">
+    <body>
 
         {% include "header-basic.njk" %}
-        <div class="wrapper">
-            <div class="col-wrap">
-                <div class="col col--md-two-thirds col--lg-two-thirds">
-                    {{ content | safe }}
-                </div>
-            </div>
+        <div class="{{"wrapper" if wrapper}}">
+            {{ content | safe }}
         </div>
 
     </body>

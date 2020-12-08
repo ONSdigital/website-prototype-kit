@@ -1,54 +1,56 @@
-.text-sm {
-  font-size: 0.7rem;
-}
-
-.text-base {
-  font-size: 1rem;
-}
-
-.text-md {
-  font-size: 1.1rem;
-  @apply font-bold;
-}
-
-.text-lg {
-  font-size: 1.3rem;
-  @apply font-bold;
-}
-
-.text-xl {
-  font-size: 1.4rem;
-  @apply font-bold;
+.text-3xl {
+  font-size: 1.7rem;
+  line-height: 1.3;
 }
 
 .text-2xl {
   font-size: 1.5rem;
-  @apply font-bold;
+  line-height: 1.4;
 }
 
-.text-3xl {
-  font-size: 1.7rem;
-  @apply font-bold;
+.text-xl {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.text-lg {
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.text-md {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
 
 @screen md {
-  .text-md {
-    font-size: 1.2rem;
-  }
-
-  .text-lg {
-    font-size: 1.4rem;
-  }
-
-  .text-xl {
-    font-size: 1.6rem;
+  .text-3xl {
+    font-size: 2.6rem;
   }
 
   .text-2xl {
     font-size: 2rem;
   }
 
-  .text-3xl {
-    font-size: 2.6rem;
+  .text-xl {
+    font-size: 1.6rem;
+  }
+
+  .text-lg {
+    font-size: 1.4rem;
+  }
+
+  .text-md {
+    font-size: 1.2rem;
   }
 }

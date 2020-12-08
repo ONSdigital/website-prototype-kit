@@ -26,3 +26,8 @@
     <!--<![endif]-->
 
 </html>
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/app.bundle.css?version={{ version }}">
+    <script defer src="/assets/app.bundle.js?version={{ version }}"></script>
+{% endblock %}

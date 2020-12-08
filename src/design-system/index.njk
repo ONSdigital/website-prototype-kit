@@ -1,0 +1,46 @@
+---
+layout: basic
+---
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/app.bundle.css?version={{ version }}">
+    <script defer src="/assets/app.bundle.js?version={{ version }}"></script>
+{% endblock %}
+
+<header class="py-12 bg-nightBlue text-white">
+    <div class="wrapper col-span-2">
+        <h1 class="text-2xl font-bold">Typographic scale</h1>
+
+    </div>
+</header>
+
+<div class="wrapper py-4 md:py-8">
+    <div class="divide-y divide-iron">
+        {% for t in typography %}
+
+            <div class="md:grid md:grid-cols-3 md:gap-4 py-6">
+                <div class="mb-2">
+                    <div class="text-lg font-bold text-nightBlue mb-2">
+                        {{t.name}}
+                        <code class="text-sm text-abbey font-normal">.text-{{t.name}}</code>
+                    </div>
+
+                    <div class="text-md font-bold">
+                        <span class="sm:inline-block md:hidden">
+                            {{t.small}}px
+                        </span>
+                        <span class="md:inline-block sm:hidden">
+                            {{t.large}}px
+                        </span> / {{t.lineHeight}}
+                    </div>
+
+                    <div class="text-base font-normal">
+                        Open Sans {{t.weight}}
+                    </div>
+
+                </div>
+                <div class="text-{{t.name}} font-{{t.weight}} col-span-2"> The Office for National Statistics is responsible for planning and carrying out the census for England and Wales.</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

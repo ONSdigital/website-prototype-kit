@@ -1,5 +1,6 @@
 ---
 layout: basic
+wrapper: true
 ---
 
 # Digital Publishing Prototype Kit
@@ -12,3 +13,4 @@ layout: basic
 ## Pages
 
 - [Prototypes](prototypes)
+- [Design System](design-system)
