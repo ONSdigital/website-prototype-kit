@@ -1,17 +1,1 @@
----
-layout: prototype
-warning: true
-permalink: "{{region.permalink}}"
-pagination:
-    data: "regions"
-    alias: "region"
-    size: 1
----
-
-{% set type = "region" %}
-{% set breadcrumbs = region.breadcrumbs %}
-{% set children = region.children %}
-{% set title = region.name %}
-{% set id = region.id %}
-
 {% include "./includes/area.njk" %}

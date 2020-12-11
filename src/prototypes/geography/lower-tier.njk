@@ -1,14 +1,1 @@
----
-layout: prototype
-warning: true
-permalink: "{{lowerTier.permalink}}"
-pagination:
-    data: "lowerTiers"
-    alias: "lowerTier"
-    size: 1
----
-{% set type = "lower tier local authority" %}
-{% set id = lowerTier.id %}
-{% set breadcrumbs = lowerTier.breadcrumbs %}
-{% set children = lowerTier.children %}
-{% set title = lowerTier.name %}
+{% include "./includes/area.njk" %}
