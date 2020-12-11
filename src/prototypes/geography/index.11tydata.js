@@ -1,9 +1,11 @@
 module.exports = {
+  layout: "prototype",
+  warning: true,
   eleventyComputed: {
-    breadcrumbs: () => [
-      {
-        title: "Home"
-      }
-    ]
+    area: {
+      name: "United Kingdom",
+      children: ({ countries }) => countries
+    },
+    breadcrumbs: false
   }
 }

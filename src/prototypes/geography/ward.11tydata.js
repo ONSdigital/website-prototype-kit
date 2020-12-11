@@ -1,17 +1,13 @@
 module.exports = {
   layout: "prototype",
   warning: true,
-  permalink: "{{ward.permalink}}",
+  permalink: "{{area.permalink}}",
   pagination: {
     data: "wards",
-    alias: "ward",
+    alias: "area",
     size: 1
   },
   eleventyComputed: {
-    type: "ward",
-    breadcrumbs: ({ ward }) => ward.breadcrumbs,
-    children: ({ ward }) => ward.children,
-    title: ({ ward }) => ward.name,
-    id: ({ ward }) => ward.id
+    breadcrumbs: ({ area }) => area.breadcrumbs
   }
 }

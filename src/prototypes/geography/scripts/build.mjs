@@ -3,6 +3,7 @@ import fs from "fs"
 import slugify from "slugify"
 
 import fetchData from "./fetch-data.mjs"
+import geoCodes from "./geo-area-codes.mjs"
 
 const BASE_PATH = "/prototypes/geography/"
 const toSlug = (str) => slugify(str, { lower: true, remove: /[*+~.,()'"!:@]/g })
@@ -58,7 +59,8 @@ const mapArea = R.map(({ areacode, areaname, parentcode }) => {
     slug,
     permalink,
     parent: R.omit(["children", "parent"], parent),
-    breadcrumbs
+    breadcrumbs,
+    type: geoCodes[areacode.value.substr(0, 3)].outputArea
   }
 
   return area

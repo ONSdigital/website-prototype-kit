@@ -1,17 +1,1 @@
----
-layout: prototype
-warning: true
-permalink: "{{upperTier.permalink}}"
-pagination:
-    data: "upperTiers"
-    alias: "upperTier"
-    size: 1
----
-
-{% set type = "upper tier local authority" %}
-{% set breadcrumbs = upperTier.breadcrumbs %}
-{% set children = upperTier.children %}
-{% set title = upperTier.name %}
-{% set id = upperTier.id %}
-
 {% include "./includes/area.njk" %}

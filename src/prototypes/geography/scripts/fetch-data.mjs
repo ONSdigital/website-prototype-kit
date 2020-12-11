@@ -65,6 +65,13 @@ const fetchData = async () => {
     lowerTiers: await fetchArea(["E07"]),
     wards: await fetchArea(["E05", "W05"])
   }
+  //   const data = {
+  //     countries: await makeQuery(COUNTRY_QUERY),
+  //     regions: await fetchArea(["W92"]),
+  //     upperTiers: await fetchArea(["W06"]),
+  //     lowerTiers: await fetchArea(["E07"]),
+  //     wards: await fetchArea(["W05"])
+  //   }
 
   return data
 }

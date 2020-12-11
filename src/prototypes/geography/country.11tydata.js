@@ -1,17 +1,13 @@
 module.exports = {
   layout: "prototype",
   warning: true,
-  permalink: "{{country.permalink}}",
+  permalink: "{{area.permalink}}",
   pagination: {
     data: "countries",
-    alias: "country",
+    alias: "area",
     size: 1
   },
   eleventyComputed: {
-    type: "country",
-    breadcrumbs: ({ country }) => country.breadcrumbs,
-    children: ({ country }) => country.children,
-    title: ({ country }) => country.name,
-    id: ({ country }) => country.id
+    breadcrumbs: ({ area }) => area.breadcrumbs
   }
 }
