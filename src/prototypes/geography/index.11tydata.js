@@ -1,5 +1,7 @@
 module.exports = {
-  layout: "prototype",
+  page: {
+    warning: true
+  },
   warning: true,
   eleventyComputed: {
     area: {

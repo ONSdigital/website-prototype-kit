@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    {% include "head.njk" %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title or metadata.title }}</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.ons.gov.uk/sixteens/{{ metadata.sixteensVersion }}/css/main.css">
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <meta name="robots" content="noindex, nofollow">
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.css' rel='stylesheet'/>
+
+        <link rel="stylesheet" href="/assets/app.bundle.css?version={{ version }}">
+        <script defer src="/assets/app.bundle.js?version={{ version }}"></script>
+
+        {% block head %}{% endblock %}
+    </head>
 
     <body>
 
@@ -13,7 +30,7 @@
             {% include "header.njk" %}
         {% endif %}
 
-        {{ content | safe }}
+        {% block body %}{% endblock %}
 
         {% if page.footer != false %}
             {% include "footer.njk" %}
@@ -26,8 +43,3 @@
     <!--<![endif]-->
 
 </html>
-
-{% block head %}
-    <link rel="stylesheet" href="/assets/app.bundle.css?version={{ version }}">
-    <script defer src="/assets/app.bundle.js?version={{ version }}"></script>
-{% endblock %}

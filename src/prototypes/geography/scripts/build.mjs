@@ -86,6 +86,9 @@ upperTiers = mapArea(rawData.upperTiers)
 lowerTiers = mapArea(rawData.lowerTiers)
 wards = mapArea(rawData.wards)
 
+// writeFile("raw-wards", rawData.wards)
+writeFile("raw-uppertiers", rawData.upperTiers)
+
 const areas = [
   { name: "countries", data: countries },
   { name: "regions", data: regions },

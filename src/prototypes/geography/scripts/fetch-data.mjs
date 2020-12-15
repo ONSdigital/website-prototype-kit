@@ -1,6 +1,20 @@
 import fetch from "node-fetch"
 import R from "ramda"
 
+// const codes = {
+//   regions: ["W92"],
+//   upperTiers: ["W06"],
+//   lowerTiers: [],
+//   wards: ["W05"]
+// }
+
+const codes = {
+  regions: ["E12", "W92"],
+  upperTiers: ["E06", "E09", "E10", "E08", "E11", "W06"],
+  lowerTiers: ["E07"],
+  wards: ["E05", "W05"]
+}
+
 const API = "http://statistics.data.gov.uk/sparql.json?query="
 
 const COUNTRY_QUERY = `
@@ -19,7 +33,7 @@ WHERE {
 }
 `
 
-const getQuery = (codes, limit = 2000) => {
+const getQuery = (codes, limit = 10000) => {
   const types = R.reduce((str, code) => str + " statid:" + code, "", codes)
 
   return `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -60,18 +74,11 @@ const fetchArea = (codes, limit) => makeQuery(getQuery(codes, limit))
 const fetchData = async () => {
   const data = {
     countries: await makeQuery(COUNTRY_QUERY),
-    regions: await fetchArea(["E12", "W92"]),
-    upperTiers: await fetchArea(["E06", "E09", "E10", "E08", "E11", "W06"]),
-    lowerTiers: await fetchArea(["E07"]),
-    wards: await fetchArea(["E05", "W05"])
+    regions: await fetchArea(codes.regions),
+    upperTiers: await fetchArea(codes.upperTiers),
+    lowerTiers: await fetchArea(codes.lowerTiers),
+    wards: await fetchArea(codes.wards)
   }
-  //   const data = {
-  //     countries: await makeQuery(COUNTRY_QUERY),
-  //     regions: await fetchArea(["W92"]),
-  //     upperTiers: await fetchArea(["W06"]),
-  //     lowerTiers: await fetchArea(["E07"]),
-  //     wards: await fetchArea(["W05"])
-  //   }
 
   return data
 }

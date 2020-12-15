@@ -1,6 +1,7 @@
 module.exports = {
-  layout: "prototype",
-  warning: true,
+  page: {
+    warning: true
+  },
   permalink: "{{area.permalink}}",
   pagination: {
     data: "wards",

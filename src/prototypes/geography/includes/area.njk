@@ -1,5 +1,4 @@
-<div class="wrapper prototype mb-8">
-
+<div class="wrapper mb-8">
     {% if breadcrumbs %}
         {% include "breadcrumbs.njk" %}
     {% endif %}
@@ -13,7 +12,7 @@
         </h2>
     </header>
 
-    <div class="md:grid grid-cols-3 mb-4">
+    <div class="md:grid gap-4 grid-cols-3 mb-4">
         <div class="col-span-1 mb-6">
             <h2 class="text-base font-bold mb-2">Contents</h2>
             <ul class="m-0 mb-4 p-0">
@@ -35,6 +34,10 @@
         </div>
     </div>
 
+    <div class="ratio-100 md:ratio-50 mb-8">
+        <div id="map" data-areaid="{{area.id}}"></div>
+    </div>
+
     {% if area.children.length %}
         <div class="mb-16" id="areas">
             <h2 class="text-md font-bold mb-2">Areas within {{area.name}}</h2>
@@ -47,4 +50,5 @@
             </ul>
         </div>
     {% endif %}
+
 </div>
