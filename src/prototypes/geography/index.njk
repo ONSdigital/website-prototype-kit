@@ -1,5 +1,22 @@
 {% extends "src/layouts/prototype.njk" %}
 
 {% block body %}
-    {% include "./includes/area.njk" %}
+    <div class="wrapper mb-8">
+        {% include "breadcrumbs.njk" %}
+
+        <header class="mb-8">
+            <h1 class="mb-1 p-0 text-3xl font-bold">{{area.name}}</h1>
+        </header>
+
+        <div class="mb-16" id="areas">
+            <h2 class="text-md font-bold mb-2">Areas within {{area.name}}</h2>
+            <ul class="list-none text-base leading-relaxed m-0 p-0">
+                {% for child in area.children %}
+                    <li class="m-0 p-0">
+                        <a href="{{child.permalink}}" class="text-base">{{child.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 {% endblock body %}

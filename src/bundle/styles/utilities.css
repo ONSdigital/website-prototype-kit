@@ -104,3 +104,13 @@
     padding-bottom: 100%;
   }
 }
+
+.icon-arrow {
+  display: inline-flex;
+
+  &:before {
+    display: inline-block;
+    margin-right: 0.2rem;
+    content: url("/images/icons/arrow-up.svg");
+  }
+}

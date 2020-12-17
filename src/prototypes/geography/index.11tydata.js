@@ -8,6 +8,9 @@ module.exports = {
       name: "United Kingdom",
       children: ({ countries }) => countries
     },
-    breadcrumbs: false
+    breadcrumbs: [{
+      title: "Home",
+      href: "/"
+    }]
   }
 }

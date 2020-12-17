@@ -3,7 +3,7 @@ import fs from "fs"
 import slugify from "slugify"
 
 import fetchData from "./fetch-data.mjs"
-import geoCodes from "./geo-area-codes.mjs"
+import geoCodes from "./area-codes.mjs"
 
 const BASE_PATH = "/prototypes/geography/"
 const toSlug = (str) => slugify(str, { lower: true, remove: /[*+~.,()'"!:@]/g })

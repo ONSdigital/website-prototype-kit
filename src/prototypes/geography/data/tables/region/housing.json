@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Resident population",
+    "sections": [
+      {
+        "header": ["All dwelling types", 22976066, null],
+        "rows": [
+          ["Unshared dwelling", 6666493, 30.2],
+          ["Shared dwelling: Two household spaces", 2725596, 12.4],
+          ["Shared dwelling: Three or more household spaces", 3940897, 17.9]
+        ]
+      },
+      {
+        "header": ["Household spaces", 13631182, 61.8],
+        "rows": [
+          ["Household spaces with at least one usual resident", 1789465, 8.1],
+          ["Household spaces with no usual residents", 7329455, 33.2],
+          ["Whole house or bungalow: Detached", 2719210, 12.3],
+          ["Whole house or bungalow: Semi-detached", 3375890, 15.3],
+          [
+            "Whole house or bungalow: Terraced (including end-terrace)",
+            1234355,
+            5.6
+          ],
+          [
+            "Flat, maisonette or apartment: Purpose-built block of flats or tenement",
+            2172438,
+            9.8
+          ],
+          [
+            "Flat, maisonette or apartment: Part of a converted or shared house (including bed-sits)",
+            1173172,
+            5.3
+          ],
+          [
+            "Flat, maisonette or apartment: In a commercial building",
+            890780,
+            4
+          ],
+          ["Caravan or other mobile or temporary structure", 108486, 0.5]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Tenure",
+    "sections": [
+      {
+        "header": ["All households", 22063368, null]
+      },
+      {
+        "header": ["Owned", 13975024, 63.3],
+        "rows": [
+          ["Owned outright", 6745584, 30.6],
+          ["Owned with a mortgage or loan", 7229440, 32.8]
+        ]
+      },
+      {
+        "header": ["Shared ownership (part owned and part rented)", 173760, 0.8]
+      },
+      {
+        "header": ["Social rented", 3903550, 17.7],
+        "rows": [
+          ["Rented from council (Local Authority)", 2079778, 9.4],
+          ["Other", 1823772, 8.3]
+        ]
+      },
+      {
+        "header": ["Private rented", 3715924, 16.8],
+        "rows": [
+          ["Private landlord or letting agency", 3401675, 15.4],
+          ["Other", 314249, 1.4],
+          ["Living rent free", 295110, 1.3]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Rooms, bedrooms and central heating",
+    "sections": [
+      {
+        "header": ["All households", 22063368, null],
+        "rows": [
+          ["Does not have central heating", 594561, 2.7],
+          ["Does have central heating", 21468807, 97.3],
+          ["Occupancy rating (rooms) of -1 or less", 1928596, 8.7],
+          ["Occupancy rating (bedrooms) of -1 or less", 1024473, 4.6],
+          ["Average household size", 2, null],
+          ["Average number of rooms per household", 5, null],
+          ["Average number of bedrooms per household", 3, null]
+        ]
+      }
+    ]
+  }
+]

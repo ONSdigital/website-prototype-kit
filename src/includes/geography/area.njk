@@ -1,9 +1,31 @@
+{% set sections = [
+    {
+        title: "Population",
+        tables: tables.population
+    }, {
+        title: "Households",
+        tables: tables.households
+    }, {
+        title: "Housing",
+        tables: tables.housing
+    }, {
+        title: "Economic Activity",
+        tables: tables.economic
+    }, {
+        title: "Education",
+        tables: tables.education
+    }, {
+        title: "Health",
+        tables: tables.health
+    }
+] %}
+
 <div class="wrapper mb-8">
     {% if breadcrumbs %}
         {% include "breadcrumbs.njk" %}
     {% endif %}
 
-    <header class="mb-8">
+    <header class="mb-8" id="top">
         <h1 class="mb-1 p-0 text-3xl font-bold">{{area.name}}</h1>
         <h2 class="mt-0 text-lg">{{area.type | capitalize}}
             {% if area.id %}
@@ -24,6 +46,13 @@
                    — <a href="#areas">Areas within {{area.name}}</a>
                     </li>
                 {% endif %}
+
+                {% for section in sections %}
+                    <li class="m-0 p-0">
+                            — <a href="#{{section.title|slug}}">{{section.title}}</a>
+                    </li>
+                {% endfor %}
+
             </ul>
         </div>
         <div class="col-span-2 mb-6" id="summary">
@@ -34,14 +63,14 @@
         </div>
     </div>
 
-    <div class="ratio-100 md:ratio-50 mb-8">
+    <div class="ratio-100 md:ratio-50 mb-8 bg-gallery">
         <div id="map" data-areaid="{{area.id}}"></div>
     </div>
 
     {% if area.children.length %}
         <div class="mb-16" id="areas">
             <h2 class="text-md font-bold mb-2">Areas within {{area.name}}</h2>
-            <ul class="list-none text-base leading-relaxed m-0 p-0 text-cols-2 md:text-cols-3">
+            <ul class="list-none leading-relaxed m-0 p-0 text-cols-2 md:text-cols-3">
                 {% for child in area.children %}
                     <li class="m-0 p-0">
                         <a href="{{child.permalink}}" class="text-base">{{child.name}}</a>
@@ -51,4 +80,17 @@
         </div>
     {% endif %}
 
+    <div>
+        {% for section in sections %}
+            <section class="mb-12" id="{{section.title|slug}}">
+                <header>
+                    <h2 class="text-2xl font-bold">{{section.title}}</h2>
+                </header>
+                {% for table in section.tables %}
+                    {% include "./table.njk" %}
+                {% endfor %}
+                <a class="text-base icon-arrow" href="#top">Back to top</a>
+            </section>
+        {% endfor %}
+    </div>
 </div>

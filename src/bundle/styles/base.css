@@ -1,6 +1,15 @@
+html {
+  font-size: 18px;
+}
+
 a {
   @apply underline;
   @apply text-blumine;
+
+  &:hover {
+    @apply no-underline;
+    @apply text-matisse;
+  }
 }
 
 li {
@@ -18,4 +27,30 @@ h5 {
 
 p {
   @apply m-0 p-0 mb-2 text-base;
+}
+
+table th {
+  height: 3rem;
+}
+
+table tr,
+table th[scope="row"] {
+  height: 2.2rem;
+  padding: 0;
+}
+
+table td {
+  padding: 0;
+}
+
+table td.td-string {
+  @apply text-left;
+}
+
+table td.td-number {
+  @apply text-right;
+}
+
+.secondary-nav__item {
+  font-size: 14px;
 }
