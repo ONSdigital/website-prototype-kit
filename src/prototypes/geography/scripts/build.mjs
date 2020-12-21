@@ -17,11 +17,13 @@ let countries, regions, upperTiers, lowerTiers, wards
 const mapChildren = (childArea, parentArea) =>
   R.pipe(
     R.filter((child) => parentArea.id === child.parentcode.value),
-    R.map((child) => {
+    R.map(({ areacode, areaname }) => {
       return {
-        id: child.areacode.value,
-        name: child.areaname.value,
-        permalink: `${parentArea.permalink}${toSlug(child.areaname.value)}/`
+        id: areacode.value,
+        name: areaname.value,
+        permalink: `${parentArea.permalink}${toSlug(areaname.value)}/`,
+        type: geoCodes[areacode.value.substr(0, 3)].outputArea,
+        areaCode: areacode.value.substr(0, 3)
       }
     })
   )(childArea)
@@ -55,6 +57,7 @@ const mapArea = R.map(({ areacode, areaname, parentcode }) => {
 
   const area = {
     id: areacode.value,
+    areaCode: areacode.value.substr(0, 3),
     name: areaname.value,
     slug,
     permalink,

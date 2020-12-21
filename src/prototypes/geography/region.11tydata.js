@@ -1,10 +1,3 @@
-const population = require("./data/tables/region/population.json")
-const households = require("./data/tables/region/households.json")
-const housing = require("./data/tables/region/housing.json")
-const economic = require("./data/tables/region/economic.json")
-const education = require("./data/tables/region/education.json")
-const health = require("./data/tables/region/health.json")
-
 module.exports = {
   page: {
     warning: true
@@ -18,13 +11,6 @@ module.exports = {
   },
   eleventyComputed: {
     breadcrumbs: ({ area }) => area.breadcrumbs,
-    tables: {
-      population,
-      households,
-      housing,
-      economic,
-      education,
-      health
-    }
+    childrenType: ({ area, mapAreaChildrenTypes }) => mapAreaChildrenTypes(area)
   }
 }

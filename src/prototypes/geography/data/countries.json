@@ -1,1 +1,249 @@
-[{"id":"E92000001","name":"England","slug":"england","permalink":"/prototypes/geography/england/","parent":{},"breadcrumbs":[{"href":"/prototypes/geography/","title":"Home"},{"title":"England","href":"/prototypes/geography/england/"}],"type":"Country","children":[{"id":"E12000004","name":"East Midlands","permalink":"/prototypes/geography/england/east-midlands/"},{"id":"E12000006","name":"East of England","permalink":"/prototypes/geography/england/east-of-england/"},{"id":"E12000007","name":"London","permalink":"/prototypes/geography/england/london/"},{"id":"E12000001","name":"North East","permalink":"/prototypes/geography/england/north-east/"},{"id":"E12000002","name":"North West","permalink":"/prototypes/geography/england/north-west/"},{"id":"E12000008","name":"South East","permalink":"/prototypes/geography/england/south-east/"},{"id":"E12000009","name":"South West","permalink":"/prototypes/geography/england/south-west/"},{"id":"E12000005","name":"West Midlands","permalink":"/prototypes/geography/england/west-midlands/"},{"id":"E12000003","name":"Yorkshire and The Humber","permalink":"/prototypes/geography/england/yorkshire-and-the-humber/"}]},{"id":"W92000004","name":"Wales","slug":"wales","permalink":"/prototypes/geography/wales/","parent":{},"breadcrumbs":[{"href":"/prototypes/geography/","title":"Home"},{"title":"Wales","href":"/prototypes/geography/wales/"}],"type":"Country","children":[{"id":"W06000019","name":"Blaenau Gwent","permalink":"/prototypes/geography/wales/blaenau-gwent/"},{"id":"W06000013","name":"Bridgend","permalink":"/prototypes/geography/wales/bridgend/"},{"id":"W06000018","name":"Caerphilly","permalink":"/prototypes/geography/wales/caerphilly/"},{"id":"W06000015","name":"Cardiff","permalink":"/prototypes/geography/wales/cardiff/"},{"id":"W06000010","name":"Carmarthenshire","permalink":"/prototypes/geography/wales/carmarthenshire/"},{"id":"W06000008","name":"Ceredigion","permalink":"/prototypes/geography/wales/ceredigion/"},{"id":"W06000003","name":"Conwy","permalink":"/prototypes/geography/wales/conwy/"},{"id":"W06000004","name":"Denbighshire","permalink":"/prototypes/geography/wales/denbighshire/"},{"id":"W06000005","name":"Flintshire","permalink":"/prototypes/geography/wales/flintshire/"},{"id":"W06000002","name":"Gwynedd","permalink":"/prototypes/geography/wales/gwynedd/"},{"id":"W06000001","name":"Isle of Anglesey","permalink":"/prototypes/geography/wales/isle-of-anglesey/"},{"id":"W06000024","name":"Merthyr Tydfil","permalink":"/prototypes/geography/wales/merthyr-tydfil/"},{"id":"W06000021","name":"Monmouthshire","permalink":"/prototypes/geography/wales/monmouthshire/"},{"id":"W06000012","name":"Neath Port Talbot","permalink":"/prototypes/geography/wales/neath-port-talbot/"},{"id":"W06000022","name":"Newport","permalink":"/prototypes/geography/wales/newport/"},{"id":"W06000009","name":"Pembrokeshire","permalink":"/prototypes/geography/wales/pembrokeshire/"},{"id":"W06000023","name":"Powys","permalink":"/prototypes/geography/wales/powys/"},{"id":"W06000016","name":"Rhondda Cynon Taf","permalink":"/prototypes/geography/wales/rhondda-cynon-taf/"},{"id":"W06000011","name":"Swansea","permalink":"/prototypes/geography/wales/swansea/"},{"id":"W06000020","name":"Torfaen","permalink":"/prototypes/geography/wales/torfaen/"},{"id":"W06000014","name":"Vale of Glamorgan","permalink":"/prototypes/geography/wales/vale-of-glamorgan/"},{"id":"W06000006","name":"Wrexham","permalink":"/prototypes/geography/wales/wrexham/"}]}]
+[
+  {
+    "id": "E92000001",
+    "areaCode": "E92",
+    "name": "England",
+    "slug": "england",
+    "permalink": "/prototypes/geography/england/",
+    "parent": {},
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" }
+    ],
+    "type": "Country",
+    "children": [
+      {
+        "id": "E12000004",
+        "name": "East Midlands",
+        "permalink": "/prototypes/geography/england/east-midlands/",
+        "type": "Region",
+        "areaCode": "E12"
+      },
+      {
+        "id": "E12000006",
+        "name": "East of England",
+        "permalink": "/prototypes/geography/england/east-of-england/",
+        "type": "Region",
+        "areaCode": "E12"
+      },
+      {
+        "id": "E12000007",
+        "name": "London",
+        "permalink": "/prototypes/geography/england/london/",
+        "type": "Region",
+        "areaCode": "E12"
+      },
+      {
+        "id": "E12000001",
+        "name": "North East",
+        "permalink": "/prototypes/geography/england/north-east/",
+        "type": "Region",
+        "areaCode": "E12"
+      },
+      {
+        "id": "E12000002",
+        "name": "North West",
+        "permalink": "/prototypes/geography/england/north-west/",
+        "type": "Region",
+        "areaCode": "E12"
+      },
+      {
+        "id": "E12000008",
+        "name": "South East",
+        "permalink": "/prototypes/geography/england/south-east/",
+        "type": "Region",
+        "areaCode": "E12"
+      },
+      {
+        "id": "E12000009",
+        "name": "South West",
+        "permalink": "/prototypes/geography/england/south-west/",
+        "type": "Region",
+        "areaCode": "E12"
+      },
+      {
+        "id": "E12000005",
+        "name": "West Midlands",
+        "permalink": "/prototypes/geography/england/west-midlands/",
+        "type": "Region",
+        "areaCode": "E12"
+      },
+      {
+        "id": "E12000003",
+        "name": "Yorkshire and The Humber",
+        "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+        "type": "Region",
+        "areaCode": "E12"
+      }
+    ]
+  },
+  {
+    "id": "W92000004",
+    "areaCode": "W92",
+    "name": "Wales",
+    "slug": "wales",
+    "permalink": "/prototypes/geography/wales/",
+    "parent": {},
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "Wales", "href": "/prototypes/geography/wales/" }
+    ],
+    "type": "Country",
+    "children": [
+      {
+        "id": "W06000019",
+        "name": "Blaenau Gwent",
+        "permalink": "/prototypes/geography/wales/blaenau-gwent/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000013",
+        "name": "Bridgend",
+        "permalink": "/prototypes/geography/wales/bridgend/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000018",
+        "name": "Caerphilly",
+        "permalink": "/prototypes/geography/wales/caerphilly/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000015",
+        "name": "Cardiff",
+        "permalink": "/prototypes/geography/wales/cardiff/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000010",
+        "name": "Carmarthenshire",
+        "permalink": "/prototypes/geography/wales/carmarthenshire/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000008",
+        "name": "Ceredigion",
+        "permalink": "/prototypes/geography/wales/ceredigion/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000003",
+        "name": "Conwy",
+        "permalink": "/prototypes/geography/wales/conwy/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000004",
+        "name": "Denbighshire",
+        "permalink": "/prototypes/geography/wales/denbighshire/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000005",
+        "name": "Flintshire",
+        "permalink": "/prototypes/geography/wales/flintshire/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000002",
+        "name": "Gwynedd",
+        "permalink": "/prototypes/geography/wales/gwynedd/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000001",
+        "name": "Isle of Anglesey",
+        "permalink": "/prototypes/geography/wales/isle-of-anglesey/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000024",
+        "name": "Merthyr Tydfil",
+        "permalink": "/prototypes/geography/wales/merthyr-tydfil/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000021",
+        "name": "Monmouthshire",
+        "permalink": "/prototypes/geography/wales/monmouthshire/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000012",
+        "name": "Neath Port Talbot",
+        "permalink": "/prototypes/geography/wales/neath-port-talbot/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000022",
+        "name": "Newport",
+        "permalink": "/prototypes/geography/wales/newport/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000009",
+        "name": "Pembrokeshire",
+        "permalink": "/prototypes/geography/wales/pembrokeshire/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000023",
+        "name": "Powys",
+        "permalink": "/prototypes/geography/wales/powys/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000016",
+        "name": "Rhondda Cynon Taf",
+        "permalink": "/prototypes/geography/wales/rhondda-cynon-taf/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000011",
+        "name": "Swansea",
+        "permalink": "/prototypes/geography/wales/swansea/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000020",
+        "name": "Torfaen",
+        "permalink": "/prototypes/geography/wales/torfaen/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000014",
+        "name": "Vale of Glamorgan",
+        "permalink": "/prototypes/geography/wales/vale-of-glamorgan/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      },
+      {
+        "id": "W06000006",
+        "name": "Wrexham",
+        "permalink": "/prototypes/geography/wales/wrexham/",
+        "type": "Unitary Authority",
+        "areaCode": "W06"
+      }
+    ]
+  }
+]
