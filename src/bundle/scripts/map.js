@@ -1,10 +1,13 @@
+import { csvParse } from "d3-dsv"
+
 import { parse } from "./wellknown"
 import { bbox } from "./turf.min.js"
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaGFtaXNodGFwbGluIiwiYSI6ImNqMWpiYmYxNDAwMWgzMm1uNThxN2g1OHMifQ.RDtUmEqrDYplmFSHft14nw"
 
-const API_URL = "http://statistics.data.gov.uk/sparql.json?query="
+const API_URL =
+  "https://pmd3-production-drafter-onsgeo.publishmydata.com/v1/sparql/live?query="
 
 const query = (code) => `
     PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
@@ -19,8 +22,10 @@ const makeQuery = async (query) => {
   const response = await fetch(API_URL + encodeURIComponent(query))
 
   if (response.status >= 200 && response.status <= 299) {
-    const json = await response.json()
-    return await json.results.bindings
+    let string = await response.text()
+    let data = await csvParse(string)
+
+    return data
   } else {
     console.error(response.status, response.statusText)
   }
@@ -61,7 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const mapElement = document.getElementById("map")
   const areaId = mapElement.getAttribute("data-areaId")
   const data = await makeQuery(query(areaId))
-  const area = data[0].geometry.value
+  const area = data[0].geometry
 
   if (!area) return false
 

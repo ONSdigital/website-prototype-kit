@@ -37,5 +37,8 @@
     "slugify": "^1.4.6",
     "tailwindcss": "^2.0.1",
     "tailwindcss-debug-screens": "^2.0.0"
+  },
+  "dependencies": {
+    "d3-dsv": "^2.0.0"
   }
 }

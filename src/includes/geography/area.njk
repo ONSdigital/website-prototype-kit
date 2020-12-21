@@ -55,7 +55,7 @@
         <div class="col-span-2 mb-6" id="summary">
             <h2 class="text-md font-bold mb-2">Summary</h2>
             <p>This area profile covers the {{area.type}} of {{area.name}} and is compiled of data from the 2021 Census.</p>
-            <p>The area profile covers areas within London and topics such as the population, households, housing, economy, education and health. </p>
+            <p>The area profile covers areas within {{area.name}} and topics such as the population, households, housing, economy, education and health. </p>
             <p>The profile also contains all area related datasets.</p>
         </div>
     </div>
@@ -68,10 +68,10 @@
         <div class="mb-16" id="areas">
             <h2 class="text-md font-bold mb-4">Areas within {{area.name}}</h2>
             <h3 class="text-base font-bold mb-2">{{childrenType}}</h3>
-            <ul class="list-none  m-0 p-0 text-cols-2 md:text-cols-3">
+            <ul class="list-none m-0 p-0 text-cols-2 md:text-cols-3">
                 {% for child in area.children %}
                     <li class="m-0 p-0">
-                        <a href="{{child.permalink}}" class="leading-loose">{{child.name}}</a>
+                        <a href="{{child.permalink}}" class="leading-relaxed">{{child.name}}</a>
                     </li>
                 {% endfor %}
             </ul>
