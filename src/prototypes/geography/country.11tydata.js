@@ -1,15 +1,10 @@
+const baseArea = require("./base-area")
+
 module.exports = {
-  page: {
-    warning: true
-  },
-  permalink: "{{area.permalink}}",
+  ...baseArea,
   pagination: {
     data: "countries",
     alias: "area",
     size: 1
-  },
-  eleventyComputed: {
-    breadcrumbs: ({ area }) => area.breadcrumbs,
-    childrenType: ({ area, mapAreaChildrenTypes }) => mapAreaChildrenTypes(area)
   }
 }

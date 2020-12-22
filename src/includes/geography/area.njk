@@ -32,10 +32,12 @@
         <div class="col-span-1 mb-6">
             <h2 class="text-base font-bold mb-2">Contents</h2>
             <ul class="m-0 mb-4 p-0">
+            
                 <li class="m-0 p-0 relative">
                     <span class="absolute">—</span>
                     <a class="pl-8 inline-block leading-tight" href="#summary">Summary</a>
                 </li>
+
                 {% if area.children.length %}
                     <li class="m-0 p-0 relative">
                         <span class="absolute">—</span>
@@ -65,7 +67,7 @@
     </div>
 
     {% if area.children.length %}
-        <div class="mb-16" id="areas">
+        <div class="mb-8" id="areas">
             <h2 class="text-md font-bold mb-4">Areas within {{area.name}}</h2>
             <h3 class="text-base font-bold mb-2">{{childrenType}}</h3>
             <ul class="list-none m-0 p-0 text-cols-2 md:text-cols-3">
@@ -77,6 +79,10 @@
             </ul>
         </div>
     {% endif %}
+
+    <div class="mb-8">
+        <a class="text-base icon-arrow" href="#top">Back to top</a>
+    </div>
 
     {% include "./tables.njk" %}
 </div>
