@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/hamishtaplin/ckhynxmqs1zhf19r9i9vacd38",
+    style: "mapbox://styles/hamishtaplin/ckizr70kj7xrr19pfbysfcyl8",
     interactive: false
   })
 
