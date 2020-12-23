@@ -1,19 +1,19 @@
 import fetch from "node-fetch"
 import R from "ramda"
 
-// const codes = {
-//   regions: ["W92"],
-//   upperTiers: ["W06"],
-//   lowerTiers: [],
-//   wards: ["W05"]
-// }
-
 const codes = {
-  regions: ["E12", "W92"],
-  upperTiers: ["E06", "E09", "E10", "E08", "E11", "W06"],
-  lowerTiers: ["E07"],
-  wards: ["E05", "W05"]
+  regions: ["W92"],
+  upperTiers: ["W06"],
+  lowerTiers: [],
+  wards: ["W05"]
 }
+
+// const codes = {
+//   regions: ["E12", "W92"],
+//   upperTiers: ["E06", "E09", "E10", "E08", "E11", "W06"],
+//   lowerTiers: ["E07"],
+//   wards: ["E05", "W05"]
+// }
 
 const API = "http://statistics.data.gov.uk/sparql.json?query="
 

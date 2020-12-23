@@ -1,3 +1,6 @@
+const R = require("ramda")
+const censusData = require("./data/census-data")
+
 const areaTypes = {
   W05: "Electoral Wards",
   E05: "Electoral Wards",
@@ -8,6 +11,21 @@ const areaTypes = {
   E10: "Local Authorities",
   E07: "Local Authority Districts",
   E12: "Regions"
+}
+
+const tableSections = R.map(
+  R.prop("title"),
+  R.prop("tableSections", censusData)
+)
+
+const pageContent = ({ area }) => {
+  const summary = "Summary"
+
+  if (area.children.length) {
+    return [summary, `Areas within ${area.name}`, ...tableSections]
+  }
+
+  return [summary, ...tableSections]
 }
 
 const mapAreaChildrenTypes = ({ area }) => {
@@ -26,6 +44,8 @@ module.exports = {
   permalink: "{{area.permalink}}",
   eleventyComputed: {
     breadcrumbs: ({ area }) => area.breadcrumbs,
-    childrenType: mapAreaChildrenTypes
-  }
+    childrenType: mapAreaChildrenTypes,
+    pageContent
+  },
+  tableSections
 }
