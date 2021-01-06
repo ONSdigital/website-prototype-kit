@@ -31,24 +31,24 @@ title: "Home", href: "../"
             <div class="col">
             {%- include "breadcrumbs.njk" -%}
                 <div class="col col--md-47 col--lg-39">
-                    <h1 class="page-intro__title font-weight-700 font-size--h1">Week</h1>
+                    <h1 class="page-intro__title font-bold font-size--h1">Week</h1>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="adjust-font-size--16">
+<div class="text-base">
     <div class="page-content">
         <div class="wrapper">
             <div class="col-wrap">
                 <div class="col">
-                    <form id="filter-week" class="form adjust-font-size--16 clear-left">
+                    <form id="filter-week" class="form text-base clear-left">
                     <fieldset>
-                        <legend>Week filter options.</legend>
-                        <p><strong>Week 1 to 10</strong> of 53</p>
+                        <legend class="text-base">Week filter options.</legend>
+                        <p class="text-base"><strong>Week 1 to 10</strong> of 53</p>
                         <div class="checkbox margin-bottom--2">
                             <input name="save-and-return" class="hidden" type="submit" value="Save and return">
-                            <input class="btn btn--link underline-link js-filter add-all" type="submit" value="Add all ({%- for week in weeks %}
+                            <input class="btn btn--link underline-link js-filter add-all text-base" type="submit" value="Add all ({%- for week in weeks %}
                                   {%- if loop.first -%}
                                       {{" " + week.label + " "}}
                                   {%- endif %}
@@ -58,7 +58,7 @@ title: "Home", href: "../"
                                   {{" " + week.label}}
                               {%- endif %}
                             {%- endfor -%})" name="add-all" aria-label="Add items 1 to 10 to the saved items">&nbsp; &nbsp;
-                            <input class="btn btn--link underline-link js-filter remove-list js-hidden" type="submit" value="Remove all ({%- for week in weeks %}
+                            <input class="btn btn--link underline-link js-filter remove-list js-hidden text-base" type="submit" value="Remove all ({%- for week in weeks %}
                                   {%- if loop.first -%}
                                       {{" " + week.label + " "}}
                                   {%- endif %}
@@ -74,7 +74,7 @@ title: "Home", href: "../"
                             {%-for item in weeks-%}
                             <div class="checkbox">
                                 <input type="checkbox" class="checkbox__input js-filter" id="id-{{item.label | lower |replace(" ", "-")}}-{{loop.index}}" name="id-{{item.label | lower |replace(" ", "-")}}-{{loop.index}}" value="{{item.label|lower}}">
-                                <label class="checkbox__label" for="id-{{item.label | lower |replace(" ", "-")}}-{{loop.index}}">
+                                <label class="checkbox__label text-base" for="id-{{item.label | lower |replace(" ", "-")}}-{{loop.index}}">
                                 {{item.label}}
                                 </label>
                             </div>
@@ -88,21 +88,21 @@ title: "Home", href: "../"
                         <div class="col col--md-22 col--lg-30">
                         <nav aria-label="Pagination breadcrumbs">
                             <ul class="list--neutral list--inline margin-right-sm--1 margin-right-md--1 margin-bottom-sm--7 margin-bottom-md--7">
-                                <li class="margin-top-sm--0 margin-top-md--0"><a href="#" aria-current="true" aria-label="Current page (Page 1 of 6)" class="page-link btn btn--plain btn--plain-active btn--block">1</a></li>
+                                <li class="margin-top-sm--0 margin-top-md--0"><a href="#" aria-current="true" aria-label="Current page (Page 1 of 6)" class="page-link text-base btn btn--plain btn--plain-active btn--block">1</a></li>
                                 <li class="margin-top-sm--0 margin-top-md--0">
-                                    <a href="../week-filter-pg2" class="page-link btn btn--plain" aria-label="Go to page 2">2</a>
+                                    <a href="../week-filter-pg2" class="page-link text-base btn btn--plain" aria-label="Go to page 2">2</a>
                                 </li>
                                 <li class="margin-top-sm--0 margin-top-md--0">
-                                    <a href="../week-filter-pg3" class="page-link btn btn--plain" aria-label="Go to page 3">3</a>
+                                    <a href="../week-filter-pg3" class="page-link text-base btn btn--plain" aria-label="Go to page 3">3</a>
                                 </li>
                                 <li class="margin-top-sm--0 margin-top-md--0">
-                                    <a href="../week-filter-pg4" class="page-link btn btn--plain" aria-label="Go to page 4">4</a>
+                                    <a href="../week-filter-pg4" class="page-link text-base btn btn--plain" aria-label="Go to page 4">4</a>
                                 </li>
                                 <li class="margin-top-sm--0 margin-top-md--0">
-                                    <a href="../week-filter-pg5" class="page-link btn btn--plain" aria-label="Go to page 5">5</a>
+                                    <a href="../week-filter-pg5" class="page-link text-base btn btn--plain" aria-label="Go to page 5">5</a>
                                 </li>
                                 <li class="margin-top-sm--0 margin-top-md--0">
-                                    <a href="../week-filter-pg2" class="page-link btn btn--plain" rel="next" aria-label="Go to the next page (Page 2)">Next</a>
+                                    <a href="../week-filter-pg2" class="page-link text-base btn btn--plain" rel="next" aria-label="Go to the next page (Page 2)">Next</a>
                                 </li>
                             </ul>
                         </nav>
@@ -113,7 +113,7 @@ title: "Home", href: "../"
                                 <input type="hidden" name="q" value="wages" class="js-auto-submit__input">
                             <div class="baseline">
                                 <label for="page-size">Results per page:</label>
-                                <select name="size" id="page-size" class="input select font-size--14 width-auto js-auto-submit__input">
+                                <select name="size" id="page-size" class="input select font-sm width-auto js-auto-submit__input">
                                     <option value="10">10</option>
                                     <option value="25">25</option>
                                     <option value="50">50</option>
@@ -125,7 +125,7 @@ title: "Home", href: "../"
                 </div>
                 <div class="col">
                     <div id="save-and-return-container" class="margin-top--4 col--lg-39 margin-bottom--4">
-                    <input name="save-and-return" class="btn btn--primary btn--thick btn--wide btn--big btn--focus margin-right--2 font-weight-700 font-size--17 text-wrap" type="submit" value="Save and return">
+                    <input name="save-and-return" class="btn btn--primary btn--thick btn--wide btn--big btn--focus margin-right--2 font-bold font-size--17 text-wrap" type="submit" value="Save and return">
                     </div>
                 </div>
             </div>
