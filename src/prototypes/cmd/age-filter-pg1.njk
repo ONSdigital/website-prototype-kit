@@ -37,37 +37,37 @@ title: "Home", href: "../"
         </div>
     </div>
 </div>
-<div class="adjust-font-size--16">
+<div class="font-base">
     <div class="page-content">
         <div class="wrapper">
             <div class="col-wrap">
                 <div class="col">
-                    <form id="filter-week" class="form adjust-font-size--16 clear-left">
+                    <form id="filter-week" class="form clear-left">
                     <fieldset>
                         <legend class="visuallyhidden">Age filter options.</legend>
-                        <p>Ages 0 to 90+ available in this dataset.</p>
+                        <p class="text-base">Ages 0 to 90+ available in this dataset.</p>
                         <div class="multiple-choice">
                             <input id="age-selection-latest" type="radio" class="multiple-choice__input" name="age-selection" value="all">
-                            <label for="age-selection-latest" class="multiple-choice__label">Add all ages (0 &ndash; 90+) <del>from the list</del></label>
+                            <label for="age-selection-latest" class="multiple-choice__label text-base">Add all ages (0 &ndash; 90+) <del>from the list</del></label>
                             <input id="all-ages-option" name="all-ages-option" type="hidden" value="total">
                         </div>
                         <div class="multiple-choice">
                           <input id="age-selection-range" type="radio" class="multiple-choice__input" name="age-selection" value="range">
-                          <label for="age-selection-range" class="multiple-choice__label">Add a range of ages (eg. 18 to 24)</label>
+                          <label for="age-selection-range" class="multiple-choice__label text-base">Add a range of ages (eg. 18 to 24)</label>
                           <input id="youngest-age" name="youngest-age" type="hidden" value="0">
                           <input id="oldest-age" name="oldest-age" type="hidden" value="90+">
                           <div id="multiple-choice-content-range" class="multiple-choice__content padding-top--4">
                             <div class="margin-left--1">
                               <div class="clearfix">
                                 <div class="col col--md-8 col--lg-8">
-                                  <label class="block margin-bottom--1" for="age-youngest">Youngest</label>
+                                  <label class="block margin-bottom--1 text-base" for="age-youngest">Youngest</label>
                                   <input name="youngest" class="filters__age--text" value="" id="age-youngest">
                                 </div>
                                 <div class="col col--md-2 col--lg-2 margin-right--1 padding-top--2">
                                   <p class="font-size--16 block">to</p>
                                 </div>
                                 <div class="col col--md-8 col--lg-8">
-                                  <label class="block margin-bottom--1" for="age-oldest">Oldest</label>
+                                  <label class="block margin-bottom--1 text-base" for="age-oldest">Oldest</label>
                                   <input name="oldest" class="filters__age--text" value="" id="age-oldest">
                                 </div>
                               </div>
@@ -75,7 +75,7 @@ title: "Home", href: "../"
                           </div>
                         </div>
                         <h3 class="font-size--h3">Or</h3>
-                        <a href="#" class="margin-left--3">Add from a list</a>
+                        <a href="#" class="margin-left--3 text-base font-bold">Add from a list</a>
                         {# <div class="multiple-choice">
 ">
                           <input id="age-selection-list" type="radio" class="multiple-choice__input" name="age-selection" value="list">
