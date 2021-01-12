@@ -28,7 +28,7 @@ const pageContent = ({ area }) => {
   return [summary, ...tableSections]
 }
 
-const mapAreaChildrenTypes = ({ area }) => {
+const childrenType = ({ area }) => {
   if (!area.children || area.children.length < 1) {
     return null
   }
@@ -43,8 +43,8 @@ module.exports = {
   warning: true,
   permalink: "{{area.permalink}}",
   eleventyComputed: {
-    breadcrumbs: ({ area }) => area.breadcrumbs,
-    childrenType: mapAreaChildrenTypes,
+    breadcrumbs: R.path(["area", "breadcrumbs"]),
+    childrenType,
     pageContent
   },
   tableSections

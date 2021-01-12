@@ -111,6 +111,32 @@
   &:before {
     display: inline-block;
     margin-right: 0.2rem;
-    content: url("/images/icons/arrow-up.svg");
+    content: url("/assets/images/icons/arrow-up.svg");
   }
+}
+
+.icon-arrow-forward {
+  display: inline-flex;
+  align-items: center;
+
+  &:after {
+    display: inline-block;
+    margin-left: 0.2rem;
+    content: "";
+    background: url("/assets/images/icons/arrow-forward.svg") no-repeat center;
+    background-size: cover;
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.icon-close {
+  background-image: url("/assets/images/icons/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.mapboxgl-ctrl-icon {
+  visibility: visible !important;
 }
