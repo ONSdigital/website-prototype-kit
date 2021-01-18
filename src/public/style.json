@@ -1,0 +1,329 @@
+{
+  "version": 8,
+  "name": "Monochrome",
+  "metadata": {
+    "mapbox:type": "default",
+    "mapbox:origin": "monochrome-dark-v1",
+    "mapbox:sdk-support": {
+      "android": "9.3.0",
+      "ios": "5.10.0",
+      "js": "1.10.0"
+    },
+    "mapbox:autocomposite": true,
+    "mapbox:groups": {
+      "Land & water, land": {
+        "name": "Land & water, land",
+        "collapsed": false
+      },
+      "Land & water, water": {
+        "name": "Land & water, water",
+        "collapsed": false
+      },
+      "Land & water, built": {
+        "name": "Land & water, built",
+        "collapsed": false
+      },
+      "Place labels, place-labels": {
+        "name": "Place labels, place-labels",
+        "collapsed": false
+      }
+    },
+    "mapbox:uiParadigm": "layers",
+    "mapbox:decompiler": {
+      "id": "ckhynxmqs1zhf19r9i9vacd38",
+      "componentVersion": "7.1.0",
+      "strata": [
+        {
+          "id": "monochrome-dark-v1",
+          "order": [
+            ["land-and-water", "land"],
+            ["land-and-water", "water"],
+            ["land-and-water", "built"],
+            ["place-labels", "place-labels"]
+          ]
+        }
+      ],
+      "overrides": {
+        "land-and-water": {
+          "water": { "paint": { "fill-color": "hsl(216, 7%, 80%)" } }
+        },
+        "place-labels": {
+          "state-label": { "paint": { "text-color": "hsl(0, 0%, 20%)" } },
+          "country-label": {
+            "paint": { "text-color": "hsl(0, 0%, 20%)" }
+          }
+        }
+      },
+      "components": { "land-and-water": "7.1.0", "place-labels": "7.1.0" },
+      "propConfig": {
+        "land-and-water": {
+          "color-base": "hsl(185, 5%, 97%)",
+          "transitionLandOnZoom": false,
+          "landuse": false,
+          "landcover": false,
+          "waterStyle": "Simple"
+        },
+        "place-labels": {
+          "states": true,
+          "countriesFont": ["Open Sans Bold", "Arial Unicode MS Regular"],
+          "statesSize": 1.2,
+          "settlementLabelStyle": "Text only",
+          "settlements": false,
+          "statesTransform": "uppercase",
+          "settlementSubdivisions": false,
+          "statesFont": ["Open Sans SemiBold", "Arial Unicode MS Bold"],
+          "countryLabelStyle": "Text only",
+          "countries": true,
+          "countriesSize": 1,
+          "worldview": "US",
+          "settlementSubdivisionsDensity": 4,
+          "settlementsMinorFont": [
+            "Open Sans Regular",
+            "Arial Unicode MS Regular"
+          ],
+          "color-base": "hsl(185, 5%, 97%)",
+          "settlementsMajorTransform": "none",
+          "settlementSubdivisionsTransform": "none",
+          "settlementsMajorFont": [
+            "Open Sans SemiBold",
+            "Arial Unicode MS Regular"
+          ],
+          "settlementsDensity": 4,
+          "settlementSubdivisionsFont": [
+            "Open Sans Regular",
+            "Arial Unicode MS Regular"
+          ]
+        }
+      }
+    }
+  },
+  "center": [-3.719262887676905, 52.13955778334102],
+  "zoom": 6.2335336598920925,
+  "bearing": 0,
+  "pitch": 0,
+  "sources": {
+    "composite": {
+      "url": "mapbox://mapbox.mapbox-streets-v8",
+      "type": "vector"
+    }
+  },
+  "sprite": "mapbox://sprites/hamishtaplin/ckhynxmqs1zhf19r9i9vacd38/5tp6nraiw1wfcm13h2b4emqz4",
+  "glyphs": "mapbox://fonts/hamishtaplin/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "land",
+      "type": "background",
+      "metadata": {
+        "mapbox:featureComponent": "land-and-water",
+        "mapbox:group": "Land & water, land"
+      },
+      "layout": {},
+      "paint": { "background-color": "hsl(185, 3%, 94%)" }
+    },
+    {
+      "id": "waterway",
+      "type": "line",
+      "metadata": {
+        "mapbox:featureComponent": "land-and-water",
+        "mapbox:group": "Land & water, water"
+      },
+      "source": "composite",
+      "source-layer": "waterway",
+      "minzoom": 8,
+      "layout": {
+        "line-cap": ["step", ["zoom"], "butt", 11, "round"],
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "hsl(185, 3%, 83%)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.3],
+          ["zoom"],
+          9,
+          ["match", ["get", "class"], ["canal", "river"], 0.1, 0],
+          20,
+          ["match", ["get", "class"], ["canal", "river"], 8, 3]
+        ],
+        "line-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 8.5, 1]
+      }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "metadata": {
+        "mapbox:featureComponent": "land-and-water",
+        "mapbox:group": "Land & water, water"
+      },
+      "source": "composite",
+      "source-layer": "water",
+      "layout": {},
+      "paint": { "fill-color": "hsl(216, 7%, 80%)" }
+    },
+    {
+      "id": "land-structure-polygon",
+      "type": "fill",
+      "metadata": {
+        "mapbox:featureComponent": "land-and-water",
+        "mapbox:group": "Land & water, built"
+      },
+      "source": "composite",
+      "source-layer": "structure",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["==", ["geometry-type"], "Polygon"],
+        ["==", ["get", "class"], "land"]
+      ],
+      "layout": {},
+      "paint": { "fill-color": "hsl(185, 3%, 94%)" }
+    },
+    {
+      "id": "land-structure-line",
+      "type": "line",
+      "metadata": {
+        "mapbox:featureComponent": "land-and-water",
+        "mapbox:group": "Land & water, built"
+      },
+      "source": "composite",
+      "source-layer": "structure",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["==", ["geometry-type"], "LineString"],
+        ["==", ["get", "class"], "land"]
+      ],
+      "layout": { "line-cap": "round" },
+      "paint": {
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.99],
+          ["zoom"],
+          14,
+          0.75,
+          20,
+          40
+        ],
+        "line-color": "hsl(185, 3%, 94%)"
+      }
+    },
+    {
+      "id": "state-label",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:featureComponent": "place-labels",
+        "mapbox:group": "Place labels, place-labels"
+      },
+      "source": "composite",
+      "source-layer": "place_label",
+      "minzoom": 3,
+      "maxzoom": 9,
+      "filter": [
+        "match",
+        ["get", "class"],
+        "state",
+        ["match", ["get", "worldview"], ["all", "US"], true, false],
+        "disputed_state",
+        [
+          "all",
+          ["==", ["get", "disputed"], "true"],
+          ["match", ["get", "worldview"], ["all", "US"], true, false]
+        ],
+        false
+      ],
+      "layout": {
+        "text-size": [
+          "interpolate",
+          ["cubic-bezier", 0.85, 0.7, 0.65, 1],
+          ["zoom"],
+          4,
+          ["step", ["get", "symbolrank"], 12, 6, 11.4, 7, 10.799999999999999],
+          9,
+          ["step", ["get", "symbolrank"], 25.2, 6, 19.2, 7, 15.6]
+        ],
+        "text-transform": "uppercase",
+        "text-font": ["Open Sans SemiBold", "Arial Unicode MS Bold"],
+        "text-field": [
+          "step",
+          ["zoom"],
+          [
+            "step",
+            ["get", "symbolrank"],
+            ["coalesce", ["get", "name_en"], ["get", "name"]],
+            5,
+            ["coalesce", ["get", "abbr"], ["get", "name_en"], ["get", "name"]]
+          ],
+          5,
+          ["coalesce", ["get", "name_en"], ["get", "name"]]
+        ],
+        "text-letter-spacing": 0.15,
+        "text-max-width": 6
+      },
+      "paint": {
+        "text-color": "hsl(0, 0%, 20%)",
+        "text-halo-color": "hsl(185, 1%, 100%)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "country-label",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:featureComponent": "place-labels",
+        "mapbox:group": "Place labels, place-labels"
+      },
+      "source": "composite",
+      "source-layer": "place_label",
+      "minzoom": 1,
+      "maxzoom": 10,
+      "filter": [
+        "match",
+        ["get", "class"],
+        "country",
+        ["match", ["get", "worldview"], ["all", "US"], true, false],
+        "disputed_country",
+        [
+          "all",
+          ["==", ["get", "disputed"], "true"],
+          ["match", ["get", "worldview"], ["all", "US"], true, false]
+        ],
+        false
+      ],
+      "layout": {
+        "icon-image": "",
+        "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+        "text-line-height": 1.1,
+        "text-max-width": 6,
+        "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"],
+        "text-offset": ["literal", [0, 0]],
+        "text-size": [
+          "interpolate",
+          ["cubic-bezier", 0.2, 0, 0.7, 1],
+          ["zoom"],
+          1,
+          ["step", ["get", "symbolrank"], 11, 4, 9, 5, 8],
+          9,
+          ["step", ["get", "symbolrank"], 22, 4, 19, 5, 17]
+        ]
+      },
+      "paint": {
+        "icon-opacity": [
+          "step",
+          ["zoom"],
+          ["case", ["has", "text_anchor"], 1, 0],
+          7,
+          0
+        ],
+        "text-color": "hsl(0, 0%, 20%)",
+        "text-halo-color": "hsl(185, 1%, 100%)",
+        "text-halo-width": 1.25
+      }
+    }
+  ],
+  "created": "2020-11-26T09:57:11.932Z",
+  "modified": "2021-01-15T16:37:19.872Z",
+  "id": "ckhynxmqs1zhf19r9i9vacd38",
+  "owner": "hamishtaplin",
+  "visibility": "private",
+  "draft": false
+}

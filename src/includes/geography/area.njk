@@ -33,7 +33,7 @@
 </div>
 
 <div class="relative">
-    <div class="ratio-100 md:ratio-50 mb-8 bg-gallery">
+    <div class="ratio-100 md:ratio-40 mb-8 bg-gallery">
         <div id="map" data-areaid="{{area.id}}"></div>
     </div>
     <div id="map-overlay" class="hidden absolute bg-white p-8 shadow-lg rounded-md bottom-4 left-4 right-4 md:top-10 md:left-10 md:bottom-auto md:w-1/3 z-50">
@@ -72,5 +72,8 @@
 {% block head %}
     <script>
         window.__areaChildren__ = {{area.children | dump | safe }}
+        {% if area.parent.children|length > 0 %}
+            window.__areaSiblings__ = {{area.parent.children | dump | safe }}
+        {% endif %}
     </script>
 {% endblock %}

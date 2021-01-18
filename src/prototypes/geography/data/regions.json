@@ -1,31 +1,87 @@
 [
   {
     "id": "E12000006",
+    "permalink": "/prototypes/geography/england/east-of-england/",
     "areaCode": "E12",
     "name": "East of England",
     "slug": "east-of-england",
-    "permalink": "/prototypes/geography/england/east-of-england/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      {
-        "title": "East of England",
-        "href": "/prototypes/geography/england/east-of-england/"
-      }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E06000055",
@@ -104,35 +160,100 @@
         "type": "Unitary Authority",
         "areaCode": "E06"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      {
+        "title": "East of England",
+        "href": "/prototypes/geography/england/east-of-england/"
+      }
+    ],
+    "type": "Region"
   },
   {
     "id": "E12000009",
+    "permalink": "/prototypes/geography/england/south-west/",
     "areaCode": "E12",
     "name": "South West",
     "slug": "south-west",
-    "permalink": "/prototypes/geography/england/south-west/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      {
-        "title": "South West",
-        "href": "/prototypes/geography/england/south-west/"
-      }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E06000022",
@@ -239,35 +360,100 @@
         "type": "Unitary Authority",
         "areaCode": "E06"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      {
+        "title": "South West",
+        "href": "/prototypes/geography/england/south-west/"
+      }
+    ],
+    "type": "Region"
   },
   {
     "id": "E12000005",
+    "permalink": "/prototypes/geography/england/west-midlands/",
     "areaCode": "E12",
     "name": "West Midlands",
     "slug": "west-midlands",
-    "permalink": "/prototypes/geography/england/west-midlands/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      {
-        "title": "West Midlands",
-        "href": "/prototypes/geography/england/west-midlands/"
-      }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E08000025",
@@ -367,32 +553,100 @@
         "type": "County",
         "areaCode": "E10"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      {
+        "title": "West Midlands",
+        "href": "/prototypes/geography/england/west-midlands/"
+      }
+    ],
+    "type": "Region"
   },
   {
     "id": "E12000007",
+    "permalink": "/prototypes/geography/england/london/",
     "areaCode": "E12",
     "name": "London",
     "slug": "london",
-    "permalink": "/prototypes/geography/england/london/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      { "title": "London", "href": "/prototypes/geography/england/london/" }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E09000002",
@@ -625,35 +879,97 @@
         "type": "London Borough",
         "areaCode": "E09"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      { "title": "London", "href": "/prototypes/geography/england/london/" }
+    ],
+    "type": "Region"
   },
   {
     "id": "E12000008",
+    "permalink": "/prototypes/geography/england/south-east/",
     "areaCode": "E12",
     "name": "South East",
     "slug": "south-east",
-    "permalink": "/prototypes/geography/england/south-east/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      {
-        "title": "South East",
-        "href": "/prototypes/geography/england/south-east/"
-      }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E06000036",
@@ -788,35 +1104,100 @@
         "type": "Unitary Authority",
         "areaCode": "E06"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      {
+        "title": "South East",
+        "href": "/prototypes/geography/england/south-east/"
+      }
+    ],
+    "type": "Region"
   },
   {
     "id": "E12000002",
+    "permalink": "/prototypes/geography/england/north-west/",
     "areaCode": "E12",
     "name": "North West",
     "slug": "north-west",
-    "permalink": "/prototypes/geography/england/north-west/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      {
-        "title": "North West",
-        "href": "/prototypes/geography/england/north-west/"
-      }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E06000008",
@@ -979,35 +1360,100 @@
         "type": "Metropolitan District",
         "areaCode": "E08"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      {
+        "title": "North West",
+        "href": "/prototypes/geography/england/north-west/"
+      }
+    ],
+    "type": "Region"
   },
   {
     "id": "E12000003",
+    "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
     "areaCode": "E12",
     "name": "Yorkshire and The Humber",
     "slug": "yorkshire-and-the-humber",
-    "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      {
-        "title": "Yorkshire and The Humber",
-        "href": "/prototypes/geography/england/yorkshire-and-the-humber/"
-      }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E08000016",
@@ -1114,35 +1560,100 @@
         "type": "Unitary Authority",
         "areaCode": "E06"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      {
+        "title": "Yorkshire and The Humber",
+        "href": "/prototypes/geography/england/yorkshire-and-the-humber/"
+      }
+    ],
+    "type": "Region"
   },
   {
     "id": "E12000001",
+    "permalink": "/prototypes/geography/england/north-east/",
     "areaCode": "E12",
     "name": "North East",
     "slug": "north-east",
-    "permalink": "/prototypes/geography/england/north-east/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      {
-        "title": "North East",
-        "href": "/prototypes/geography/england/north-east/"
-      }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E06000047",
@@ -1228,35 +1739,100 @@
         "type": "Metropolitan District",
         "areaCode": "E08"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      {
+        "title": "North East",
+        "href": "/prototypes/geography/england/north-east/"
+      }
+    ],
+    "type": "Region"
   },
   {
     "id": "E12000004",
+    "permalink": "/prototypes/geography/england/east-midlands/",
     "areaCode": "E12",
     "name": "East Midlands",
     "slug": "east-midlands",
-    "permalink": "/prototypes/geography/england/east-midlands/",
     "parent": {
       "id": "E92000001",
+      "permalink": "/prototypes/geography/england/",
       "areaCode": "E92",
       "name": "England",
       "slug": "england",
-      "permalink": "/prototypes/geography/england/",
+      "children": [
+        {
+          "id": "E12000004",
+          "name": "East Midlands",
+          "permalink": "/prototypes/geography/england/east-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000006",
+          "name": "East of England",
+          "permalink": "/prototypes/geography/england/east-of-england/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000007",
+          "name": "London",
+          "permalink": "/prototypes/geography/england/london/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000001",
+          "name": "North East",
+          "permalink": "/prototypes/geography/england/north-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000002",
+          "name": "North West",
+          "permalink": "/prototypes/geography/england/north-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000008",
+          "name": "South East",
+          "permalink": "/prototypes/geography/england/south-east/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000009",
+          "name": "South West",
+          "permalink": "/prototypes/geography/england/south-west/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000005",
+          "name": "West Midlands",
+          "permalink": "/prototypes/geography/england/west-midlands/",
+          "type": "Region",
+          "areaCode": "E12"
+        },
+        {
+          "id": "E12000003",
+          "name": "Yorkshire and The Humber",
+          "permalink": "/prototypes/geography/england/yorkshire-and-the-humber/",
+          "type": "Region",
+          "areaCode": "E12"
+        }
+      ],
       "breadcrumbs": [
         { "href": "/prototypes/geography/", "title": "Home" },
         { "title": "England", "href": "/prototypes/geography/england/" }
       ],
       "type": "Country"
     },
-    "breadcrumbs": [
-      { "href": "/prototypes/geography/", "title": "Home" },
-      { "title": "England", "href": "/prototypes/geography/england/" },
-      {
-        "title": "East Midlands",
-        "href": "/prototypes/geography/england/east-midlands/"
-      }
-    ],
-    "type": "Region",
     "children": [
       {
         "id": "E06000015",
@@ -1321,6 +1897,15 @@
         "type": "Unitary Authority",
         "areaCode": "E06"
       }
-    ]
+    ],
+    "breadcrumbs": [
+      { "href": "/prototypes/geography/", "title": "Home" },
+      { "title": "England", "href": "/prototypes/geography/england/" },
+      {
+        "title": "East Midlands",
+        "href": "/prototypes/geography/england/east-midlands/"
+      }
+    ],
+    "type": "Region"
   }
 ]

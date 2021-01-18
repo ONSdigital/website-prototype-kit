@@ -25,11 +25,11 @@ const COUNTRY_QUERY = `
     PREFIX pmdfoi: <http://publishmydata.com/def/ontology/foi/>
     SELECT DISTINCT ?areacode ?areaname
     WHERE {
-    VALUES ?types { statid:E92 statid:W92 }
-    ?area statdef:code ?types ;
-            geodef:status "live" ;
-            geodef:officialname ?areaname ;
-            rdfs:label ?areacode .
+        VALUES ?types { statid:E92 statid:W92 }
+        ?area statdef:code ?types ;
+                geodef:status "live" ;
+                geodef:officialname ?areaname ;
+                rdfs:label ?areacode .
     }
 `
 
@@ -44,15 +44,15 @@ const getQuery = (codes, limit = 10000) => {
     PREFIX pmdfoi: <http://publishmydata.com/def/ontology/foi/>
     SELECT DISTINCT ?areacode ?areaname ?parentcode ?parentname
     WHERE {
-    VALUES ?types { ${types} }
-    ?area statdef:code ?types ;
-            geodef:status "live" ;
-            geodef:officialname ?areaname ;
-            rdfs:label ?areacode ;
-            pmdfoi:parent ?parent .
-    ?parent geodef:status "live" ;
-            geodef:officialname ?parentname ;
-            rdfs:label ?parentcode .
+        VALUES ?types { ${types} }
+        ?area statdef:code ?types ;
+                geodef:status "live" ;
+                geodef:officialname ?areaname ;
+                rdfs:label ?areacode ;
+                pmdfoi:parent ?parent .
+        ?parent geodef:status "live" ;
+                geodef:officialname ?parentname ;
+                rdfs:label ?parentcode .
     }
     LIMIT ${limit}
 `

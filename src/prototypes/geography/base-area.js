@@ -36,6 +36,14 @@ const childrenType = ({ area }) => {
   return areaTypes[area.children[0].areaCode]
 }
 
+const siblingsType = ({ area }) => {
+  if (!area.parent.children || area.parent.children.length < 1) {
+    return null
+  }
+
+  return areaTypes[area.parent.children[0].areaCode]
+}
+
 module.exports = {
   page: {
     warning: true
@@ -45,6 +53,7 @@ module.exports = {
   eleventyComputed: {
     breadcrumbs: R.path(["area", "breadcrumbs"]),
     childrenType,
+    siblingsType,
     pageContent
   },
   tableSections

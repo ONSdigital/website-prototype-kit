@@ -73,6 +73,7 @@
 
 @variants responsive {
   .ratio-25,
+  .ratio-40,
   .ratio-50,
   .ratio-75,
   .ratio-100 {
@@ -90,6 +91,10 @@
 
   .ratio-25 {
     padding-bottom: 25%;
+  }
+
+  .ratio-40 {
+    padding-bottom: 45%;
   }
 
   .ratio-50 {
