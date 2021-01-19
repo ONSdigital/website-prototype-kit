@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const areaData = await makeQuery(areaQuery(areaId))
     const areas = extractAreaAndSiblings(areaData, areaId)
     area = areas.area
-    siblings = filterAreas(areas.siblings, areaSiblings)
+    siblings = filterAreas(deDupeAreas(areas.siblings), areaSiblings)
 
     showArea = true
   }
