@@ -9,7 +9,7 @@ const tableSections = [
   { title: "Population", data: population },
   { title: "Households", data: households },
   { title: "Housing", data: housing },
-  { title: "Economic", data: economic },
+  { title: "Economic Activity", data: economic },
   { title: "Education", data: education },
   { title: "Health", data: health }
 ]
