@@ -2,7 +2,7 @@ import { csvParse } from "d3-dsv"
 import { parse } from "./wellknown"
 import { bbox, centroid } from "./turf.min.js"
 
-let map
+let map, area, children, siblings, showArea
 
 const areaChildren = window.__areaChildren__
 const areaSiblings = window.__areaSiblings__
@@ -11,6 +11,15 @@ const colours = {
   matisse: "#206095",
   salem: "#0F8243"
 }
+
+const opacityCaseStatement = [
+  "case",
+  ["==", ["feature-state", "selected"], true],
+  0.4,
+  ["==", ["feature-state", "hover"], true],
+  0.3,
+  0.1
+]
 
 const isEqual = (a) => (b) => a === b
 
@@ -132,6 +141,24 @@ const makeQuery = async (query) => {
   }
 }
 
+const findAreaById = (id) =>
+  [...children, ...siblings].find((area) => area.id === id)
+
+const getCenter = (polygon) => {
+  // Hack: In case polygon is wrapped in an array (ie. when it is part of a multipolygon)
+  polygon = polygon.length === 1 ? polygon[0] : polygon
+
+  let lngs = 0
+  let lats = 0
+
+  polygon.forEach((lnglat) => {
+    lngs += lnglat[0]
+    lats += lnglat[1]
+  })
+
+  return [lngs / polygon.length, lats / polygon.length]
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   const mapElement = document.getElementById("map")
   const areaId = mapElement.getAttribute("data-areaId")
@@ -140,8 +167,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const overlaySubtitle = document.getElementById("map-overlay-subtitle")
   const overlayLink = document.getElementById("map-overlay-link")
   const overlayClose = document.getElementById("map-overlay-close")
-
-  let area, siblings, showArea
 
   if (areaId === "W92000004" || areaId === "E92000001") {
     const areaData = await makeQuery(countryQuery(areaId))
@@ -152,14 +177,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const areas = extractAreaAndSiblings(areaData, areaId)
     area = areas.area
     siblings = filterAreas(deDupeAreas(areas.siblings), areaSiblings)
-
     showArea = true
   }
 
   const childData = await makeQuery(childrenQuery(areaId))
   const deDupedChildren = deDupeAreas(childData)
-  const filteredChildren = filterAreas(deDupedChildren, areaChildren)
-  const areaChildrenGeoJson = convertAreasToGeoJson(filteredChildren)
+
+  children = filterAreas(deDupedChildren, areaChildren)
+  const areaChildrenGeoJson = convertAreasToGeoJson(children)
 
   const geoJson = parse(area.geometry)
   const bounds = bbox(geoJson)
@@ -229,12 +254,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         source: areaChildrenGeoJson.features.length ? "area-children" : "area",
         paint: {
           "fill-color": colours.salem,
-          "fill-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            0.3,
-            0.1
-          ]
+          "fill-opacity": opacityCaseStatement
         }
       },
       firstSymbolId
@@ -352,12 +372,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           source: "area-siblings",
           paint: {
             "fill-color": colours.matisse,
-            "fill-opacity": [
-              "case",
-              ["boolean", ["feature-state", "hover"], false],
-              0.3,
-              0.1
-            ]
+            "fill-opacity": opacityCaseStatement
           }
         },
         firstSymbolId
@@ -411,7 +426,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    const onMouseLeave = (e) => {
+    const onMouseLeave = () => {
       map.getCanvas().style.cursor = ""
 
       if (hoveredAreaId) {
@@ -428,7 +443,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const onMouseClick = (e) => {
-      const { properties } = e.features[0]
+      const { properties, id, layer } = e.features[0]
 
       overlayTitle.innerText = properties.name
       overlaySubtitle.innerText = `${properties.type} (${properties.id})`
@@ -436,17 +451,42 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       overlay.classList.remove("hidden")
 
-      selectedStateId = e.features[0].id
+      map.setFeatureState(
+        { source: "area-children", id: selectedStateId },
+        { selected: false }
+      )
+      map.setFeatureState(
+        { source: "area-siblings", id: selectedStateId },
+        { selected: false }
+      )
+
+      selectedStateId = id
+
+      const isMobile = window.innerWidth <= 768
+      const left = isMobile ? 0 : window.innerWidth / 3
+      const top = isMobile ? -50 : 0
+
+      map.fitBounds(bbox(parse(findAreaById(selectedStateId).geometry)), {
+        animate: true,
+        padding: {
+          top,
+          bottom: 100,
+          left,
+          right: 100
+        }
+      })
 
       map.setFeatureState(
-        { source: "area-children", selectedStateId },
+        { source: layer.source, id: selectedStateId },
         { selected: true }
       )
     }
 
-    map.on("mousemove", "area-children-fill", onMouseMove)
-    map.on("mouseleave", "area-children-fill", onMouseLeave)
-    map.on("click", "area-children-fill", onMouseClick)
+    if (children.length) {
+      map.on("click", "area-children-fill", onMouseClick)
+      map.on("mousemove", "area-children-fill", onMouseMove)
+      map.on("mouseleave", "area-children-fill", onMouseLeave)
+    }
 
     if (siblings) {
       map.on("mouseleave", "area-siblings-fill", onMouseLeave)
