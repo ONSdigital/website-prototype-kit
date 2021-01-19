@@ -23,15 +23,11 @@ const deDupeAreas = (areas) =>
     return array
   }, [])
 
-const mergeAreas = (a, b) => {
-  const sortedA = a.sort((a, b) => a.code > b.code)
-  const sortedB = b.sort((a, b) => a.id > b.id)
-
-  return sortedA.map((area, i) => ({
+const mergeAreas = (a, b) =>
+  a.map((area) => ({
     ...area,
-    ...sortedB[i]
+    ...b.find(({ id }) => id === area.code)
   }))
-}
 
 const filterAreas = (a, b) => {
   const filteredAreas = a.filter(({ code }) => b.find(({ id }) => id === code))
@@ -449,11 +445,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     map.on("mousemove", "area-children-fill", onMouseMove)
-    map.on("mousemove", "area-siblings-fill", onMouseMove)
     map.on("mouseleave", "area-children-fill", onMouseLeave)
-    map.on("mouseleave", "area-siblings-fill", onMouseLeave)
     map.on("click", "area-children-fill", onMouseClick)
-    map.on("click", "area-siblings-fill", onMouseClick)
+
+    if (siblings) {
+      map.on("mouseleave", "area-siblings-fill", onMouseLeave)
+      map.on("mousemove", "area-siblings-fill", onMouseMove)
+      map.on("click", "area-siblings-fill", onMouseClick)
+    }
 
     overlayClose.addEventListener("click", () => {
       overlay.classList.add("hidden")
