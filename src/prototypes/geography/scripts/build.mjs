@@ -1,3 +1,6 @@
+import dotenv from "dotenv"
+dotenv.config()
+
 import R from "ramda"
 import fs from "fs"
 import slugify from "slugify"
@@ -102,9 +105,6 @@ regions = mapArea(rawData.regions)
 upperTiers = mapArea(rawData.upperTiers)
 lowerTiers = mapArea(rawData.lowerTiers)
 wards = mapArea(rawData.wards)
-
-// writeFile("raw-wards", rawData.wards)
-// writeFile("raw-uppertiers", rawData.upperTiers)
 
 const areas = [
   { name: "countries", data: countries },

@@ -1,18 +1,25 @@
 import fetch from "node-fetch"
 import R from "ramda"
 
-// const codes = {
-//   regions: ["W92"],
-//   upperTiers: ["W06"],
-//   lowerTiers: [],
-//   wards: ["W05"]
-// }
+import dotenv from "dotenv"
+dotenv.config()
 
-const codes = {
-  regions: ["E12", "W92"],
-  upperTiers: ["E06", "E09", "E10", "E08", "E11", "W06"],
-  lowerTiers: ["E07"],
-  wards: ["E05", "W05"]
+let codes
+
+if (process.env.NODE_ENV !== "prod") {
+  codes = {
+    regions: ["W92"],
+    upperTiers: ["W06"],
+    lowerTiers: [],
+    wards: ["W05"]
+  }
+} else {
+  codes = {
+    regions: ["E12", "W92"],
+    upperTiers: ["E06", "E09", "E10", "E08", "E11", "W06"],
+    lowerTiers: ["E07"],
+    wards: ["E05", "W05"]
+  }
 }
 
 const API = "http://statistics.data.gov.uk/sparql.json?query="
