@@ -1,0 +1,18 @@
+<!-- A basic layout with minimal header -->
+<!-- Use this template for pages about the prototypes, not the prototypes themselves -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include "head.njk" %}
+
+    <body>
+
+        {% include "header-basic.njk" %}
+        <div class="{{"wrapper" if wrapper}}">
+            {{ content | safe }}
+        </div>
+
+    </body>
+
+</html>

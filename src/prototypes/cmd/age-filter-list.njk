@@ -1,0 +1,143 @@
+---
+layout: prototype
+page:
+    warning: true
+    footer: true
+---
+{% set breadcrumbs = [{
+title: "Home", href: "../"
+},
+{title: "Deaths registered weekly in England and Wales by age and sex",href: "../"},
+{title: "2010-19",href: "../"},
+{title: "Filter options",href:"../"},
+{title: "Filter ages"}]
+%}
+{% set ages = [
+    {label:"1"},
+    {label:"2"},
+    {label:"3"},
+    {label:"4"},
+    {label:"5"},
+    {label:"6"},
+    {label:"7"},
+    {label:"8"},
+    {label:"9"},
+    {label:"10"},
+    {label:"11"},
+    {label:"12"},
+    {label:"13"},
+    {label:"14"},
+    {label:"15"},
+    {label:"16"},
+    {label:"17"},
+    {label:"18"},
+    {label:"19"},
+    {label:"20"}
+]%}
+<main id="main" role="main">
+<div class="page-intro">
+    <div class="wrapper">
+        <div class="col-wrap">
+            <div class="col">
+            {%- include "breadcrumbs.njk" -%}
+                <div class="col col--md-47 col--lg-39">
+                    <h1 class="page-intro__title font-weight-700 font-size--h1">Age</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="font-base">
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="col-wrap">
+                <div class="col">
+                    <form id="filter-week" class="form clear-left">
+                    <fieldset>
+                        <legend class="visuallyhidden">Age filter options.</legend>
+                        {# <p class="text-base">Ages 0 to 90+ available in this dataset.</p> #}
+                        <p class="text-base"><strong>Ages {%- for a in ages %}{%- if loop.first -%}{{" "+a.label+" "}}{%endif%}{%-endfor-%} to {%- for a in ages %}{%-if loop.last -%}{{" "+a.label}}{%endif%}{%- endfor -%}</strong> of 90+ available in this dataset</p>
+                        <div class="checkbox margin-bottom--2">
+                            <input name="save-and-return" class="hidden" type="submit" value="Save and return">
+                            <input class="btn btn--link underline-link js-filter add-all text-base" type="submit" value="Add all ({%- for a in ages %}
+                                  {%- if loop.first -%}
+                                      {{"" + a.label + " "}}
+                                  {%- endif %}
+                                {%- endfor -%} &ndash; 
+                            {%- for a in ages %}
+                              {%- if loop.last -%}
+                                  {{" " + a.label}}
+                              {%- endif %}
+                            {%- endfor -%})" name="add-all" aria-label="Add items {%- for a in ages %}{%- if loop.first -%}{{" "+a.label+" "}}{%endif%}{%-endfor-%} to {%- for a in ages %}{%-if loop.last -%}{{" "+a.label}}{%endif%}{%- endfor -%}">&nbsp; &nbsp;
+                            <input class="btn btn--link underline-link js-filter remove-list js-hidden text-base" type="submit" value="Remove all ({%- for a in ages %}
+                                  {%- if loop.first -%}
+                                      {{"" + a.label + " "}}
+                                  {%- endif %}
+                                {%- endfor -%} &ndash; 
+                            {%- for a in ages %}
+                              {%- if loop.last -%}
+                                  {{" " + a.label}}
+                              {%- endif %}
+                            {%- endfor -%})" id="remove-all" name="remove-all" aria-label="Remove all items in the list from the saved items">
+                        </div>
+                        
+                        {# Checkboxes for ages #}
+                        {%- for a in ages -%}
+                        <div class="checkbox">
+                          <input type="checkbox" class="checkbox__input " id="id-{{a.label}}" name="{{a.label}}" value="{{a.label}}">
+                          <label class="checkbox__label text-base" for="id-{{a.label}}">{{a.label}}</label>
+                        </div>
+                        {%- endfor -%}
+                        {# /Checkboxes for ages #}
+                    </fieldset>
+                    </form>
+                    <form id="js-pagination-container" class="js-auto-submit__form">
+                    <legend class="margin-bottom--2 margin-top--2 text-base">Page 1 of 6</legend>
+                        <div class="col col--md-22 col--lg-30">
+                          <nav aria-label="Pagination breadcrumbs">
+                              <ul class="list--neutral list--inline margin-right-sm--1 margin-right-md--1 margin-bottom-sm--7 margin-bottom-md--7">
+                                  <li class="margin-top-sm--0 margin-top-md--0"><a href="#" aria-current="true" aria-label="Current page (Page 1 of 6)" class="page-link btn btn--plain btn--plain-active btn--block text-base">1</a></li>
+                                  <li class="margin-top-sm--0 margin-top-md--0">
+                                      <a href="../age-filter-list-pg2" class="page-link btn btn--plain text-base" aria-label="Go to page 2">2</a>
+                                  </li>
+                                  <li class="margin-top-sm--0 margin-top-md--0">
+                                      <a href="../age-filter-list-pg3" class="page-link btn btn--plain text-base" aria-label="Go to page 3">3</a>
+                                  </li>
+                                  <li class="margin-top-sm--0 margin-top-md--0">
+                                      <a href="../age-filter-list-pg4" class="page-link btn btn--plain text-base" aria-label="Go to page 4">4</a>
+                                  </li>
+                                  <li class="margin-top-sm--0 margin-top-md--0">
+                                      <a href="../age-filter-list-pg5" class="page-link btn btn--plain text-base" aria-label="Go to page 5">5</a>
+                                  </li>
+                                  <li class="margin-top-sm--0 margin-top-md--0">
+                                      <a href="../age-filter-list-pg2" class="page-link btn btn--plain text-base" rel="next" aria-label="Go to the next page (Page 2)">Next</a>
+                                  </li>
+                              </ul>
+                          </nav>
+                        </div>
+                        <div class="col col--md-12 col--lg-12 margin-top-md--2 padding-left--1">
+                            <fieldset class="visuallyhidden">Set the number of items per page</fieldset>
+                                <input type="hidden" name=":uri" value="search">
+                                <input type="hidden" name="q" value="wages" class="js-auto-submit__input">
+                            <div class="baseline">
+                                <label for="page-size" class="text-base">Results per page:</label>
+                                <select name="size" id="page-size" class="input select font-size--14 width-auto js-auto-submit__input">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                </select>
+                            <button class="btn btn--primary btn--thin btn--small hide--md" type="submit">Submit</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col">
+                    <div id="save-and-return-container" class="margin-top--4 col--lg-39 margin-bottom--4">
+                    <input name="save-and-return" class="btn btn--primary btn--thick btn--wide btn--big btn--focus margin-right--2 font-weight-700 text-base text-wrap" type="submit" value="Save and return">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>

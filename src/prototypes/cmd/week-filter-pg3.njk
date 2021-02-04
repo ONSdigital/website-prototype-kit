@@ -1,0 +1,138 @@
+---
+layout: prototype
+page:
+    warning: true
+    footer: true
+---
+{% set breadcrumbs = [{
+title: "Home", href: "../"
+},
+{title: "Deaths registered weekly in England and Wales by age and sex",href: "../"},
+{title: "2010-19",href: "../"},
+{title: "Filter options",href:"../"},
+{title: "Filter"}]
+%}
+{% set weeks = [
+    {label:"Week 21"},
+    {label:"Week 22"},
+    {label:"Week 23"},
+    {label:"Week 24"},
+    {label:"Week 25"},
+    {label:"Week 26"},
+    {label:"Week 27"},
+    {label:"Week 28"},
+    {label:"Week 29"},
+    {label:"Week 30"}
+]%}
+<main id="main" role="main">
+<div class="page-intro">
+    <div class="wrapper">
+        <div class="col-wrap">
+            <div class="col">
+            {%- include "breadcrumbs.njk" -%}
+                <div class="col col--md-47 col--lg-39">
+                    <h1 class="page-intro__title font-weight-700 font-size--h1">Week</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-base">
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="col-wrap">
+                <div class="col">
+                    <form id="filter-week" class="form clear-left">
+                    <fieldset>
+                        <legend>Week filter options.</legend>
+                        <p class="text-base"><strong>Week 21 to 30</strong> of 53</p>
+                        <div class="checkbox margin-bottom--2">
+                            <input name="save-and-return" class="hidden" type="submit" value="Save and return">
+                            <input class="btn btn--link text-base underline-link js-filter add-all" type="submit" value="Add all ({%- for week in weeks %}
+                                  {%- if loop.first -%}
+                                      {{" " + week.label + " "}}
+                                  {%- endif %}
+                                {%- endfor -%} &ndash; 
+                            {%- for week in weeks %}
+                              {%- if loop.last -%}
+                                  {{" " + week.label}}
+                              {%- endif %}
+                            {%- endfor -%})" name="add-all" aria-label="Add items 11 to 20 to the saved items">&nbsp; &nbsp;
+                            <input class="btn btn--link text-base underline-link js-filter remove-list js-hidden" type="submit" value="Remove all ({%- for week in weeks %}
+                                  {%- if loop.first -%}
+                                      {{" " + week.label + " "}}
+                                  {%- endif %}
+                                {%- endfor -%} &ndash; 
+                            {%- for week in weeks %}
+                              {%- if loop.last -%}
+                                  {{" " + week.label}}
+                              {%- endif %}
+                            {%- endfor -%})" id="remove-all" name="remove-all" aria-label="Remove all items in the list from the saved items">
+                        </div>
+                        <div class="checkbox-group">
+                            {# Loop through list of weeks #}
+                            {%-for item in weeks-%}
+                            <div class="checkbox">
+                                <input type="checkbox" class="checkbox__input js-filter text-base" id="id-{{item.label | lower |replace(" ", "-")}}-{{loop.index}}" name="id-{{item.label | lower |replace(" ", "-")}}-{{loop.index}}" value="{{item.label|lower}}">
+                                <label class="checkbox__label text-base" for="id-{{item.label | lower |replace(" ", "-")}}-{{loop.index}}">
+                                {{item.label}}
+                                </label>
+                            </div>
+                            {%-endfor-%}
+                            {# End loop through list of weeks #}
+                        </div>
+                    </fieldset>
+                    </form>
+                    <form id="js-pagination-container" class="js-auto-submit__form">
+                    <legend class="margin-bottom--2 margin-top--2 text-base">Page 3 of 6</legend>
+                        <div class="col col--md-22 col--lg-28">
+                        <nav aria-label="Pagination breadcrumbs">
+                            <ul class="list--neutral list--inline margin-right-sm--1 margin-right-md--1 margin-bottom-sm--7 margin-bottom-md--7">
+                                <li class="margin-top-sm--0 margin-top-md--0">
+                                    <a href="../week-filter-pg2" rel="previous" class="page-link btn btn--plain text-base">Previous</a>
+                                </li>
+                                <li class="margin-top-sm--0 margin-top-md--0"><a href="../week-filter-pg1" class="page-link btn btn--plain text-base" aria-label="Page 1 of 6">1</a></li>
+                                <li class="margin-top-sm--0 margin-top-md--0">
+                                    <a href="../week-filter-pg2" class="page-link btn btn--plain text-base" aria-label="Page 2 of 6">2</a>
+                                </li>
+                                <li class="margin-top-sm--0 margin-top-md--0">
+                                    <a href="#" aria-current="true" aria-label="Current page (Page 3 of 6)" class="page-link btn btn--plain btn--plain-active btn--block text-base">3</a>
+                                </li>
+                                <li class="margin-top-sm--0 margin-top-md--0">
+                                    <a href="../week-filter-pg4" class="page-link btn btn--plain text-base" aria-label="Page 4 of 6">4</a>
+                                </li>
+                                <li class="margin-top-sm--0 margin-top-md--0">
+                                    <a href="../week-filter-pg5" class="page-link btn btn--plain text-base" aria-label="Page 5 of 6">5</a>
+                                </li>
+                                <li class="margin-top-sm--0 margin-top-md--0">
+                                    <a href="../week-filter-pg4" rel="next" class="page-link btn btn--plain text-base">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        </div>
+                        <div class="col col--md-12 col--lg-12 margin-top-md--2 padding-left--1">
+                            <fieldset class="visuallyhidden">Set the number of items per page</fieldset>
+                                <input type="hidden" name=":uri" value="search">
+                                <input type="hidden" name="q" value="wages" class="js-auto-submit__input">
+                            <div class="baseline">
+                                <label for="page-size" class="text-base">Results per page:</label>
+                                <select name="size" id="page-size" class="input select font-size--14 width-auto js-auto-submit__input">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                </select>
+                            <button class="btn btn--primary btn--thin btn--small hide--md" type="submit">Submit</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col">
+                    <div id="save-and-return-container" class="margin-top--4 col--lg-39 margin-bottom--4">
+                    <input name="save-and-return" class="btn btn--primary btn--thick btn--wide btn--big btn--focus margin-right--2 font-weight-700 text-base text-wrap" type="submit" value="Save and return">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
