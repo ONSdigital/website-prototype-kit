@@ -4,7 +4,7 @@
             {% for crumb in breadcrumbs %}
                 <li class="breadcrumb__item">
                     {% if crumb.href %}
-                        <a class="breadcrumb__link" href="{{crumb.href}}">{{crumb.title}}</a>
+                        <a class="breadcrumb__link text-sm" href="{{crumb.href}}">{{crumb.title}}</a>
                     {% else %}
                         {{crumb.title}}
                     {% endif %}
